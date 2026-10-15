@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "Opioid use disorder medications, appetite and eating",
+    "subtitle": "What research has found about methadone, buprenorphine (Suboxone) and naltrexone (Vivitrol).",
+    "disclaimer": "This page explains research findings. It is not medical advice. No one should start, stop, or change a medication, or change their diet, based on what is shown here. Talk with your prescriber, pharmacist, or care team about your own situation.",
+    "howToRead": "Each box gives a one-sentence summary and an evidence label. Select a box to see more detail and a source link.",
+    "reviewNote": "Evidence labels are an editorial judgement made when this page was drafted. Source links were found by web search and have not all been opened and checked line by line. Please verify them before relying on or sharing this page.",
+    "evidenceLevels": {
+      "strong": "Consistent results from several well-designed studies.",
+      "mixed": "Studies exist but disagree, or are mostly observational, so the picture is not settled.",
+      "thin": "Only a few small studies, case reports, or indirect sources.",
+      "needs-source": "No usable source has been found yet. This is a gap, not a finding of 'no effect'."
+    }
+  },
+  "columns": [
+    { "id": "appetite", "name": "Appetite" },
+    { "id": "weight", "name": "Weight" },
+    { "id": "gi", "name": "GI effects" },
+    { "id": "food", "name": "Food interactions" }
+  ],
+  "rows": [
+    {
+      "id": "methadone",
+      "name": "Methadone",
+      "note": "Daily full opioid agonist, usually taken as a liquid or tablet.",
+      "cells": {
+        "appetite": {
+          "summary": "No source has been found that studies appetite changes on methadone.",
+          "evidence": "needs-source",
+          "detail": "Appetite is often discussed anecdotally, but this page does not include claims that are not tied to a source. Appetite is also hard to separate from other changes in early recovery, such as stopping other substances.",
+          "sources": []
+        },
+        "weight": {
+          "summary": "Several observational studies report weight gain over months to years on methadone, but the numbers vary and none are randomized.",
+          "evidence": "mixed",
+          "detail": "A 2022 meta-analysis pooled only four longitudinal studies (362 people) and found BMI rises of roughly 2.2 to 5.4 after at least a year of methadone, with no significant difference between men and women. A 3-year chart review of 74 patients found the share with overweight or obesity rose from 42% to 88%, with larger BMI gains linked to higher doses and female sex. A U.S. veterans cohort projected roughly 10 lb gained over a year on average. Because these are observational, they cannot separate the drug itself from other changes such as recovery, diet, and stopping other substances.",
+          "sources": [
+            { "title": "Sex differences in weight gain during methadone treatment: meta-analysis (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/35868182/" },
+            { "title": "Increases in BMI and cardiovascular risk factors during methadone maintenance (chart review)", "url": "https://wmpllc.org/ojs/index.php/jom/article/view/2661" },
+            { "title": "Do medications for opioid use disorder cause weight gain? (ATTC Network summary)", "url": "https://attcnetwork.org/asme_articles/do-medications-for-opioid-use-disorder-cause-weight-gain/" }
+          ]
+        },
+        "gi": {
+          "summary": "No source has been found for this cell yet.",
+          "evidence": "needs-source",
+          "detail": "Gut effects of opioids are commonly described, but this page only includes claims that can be linked to a source. Add one from the methadone prescribing information or a peer-reviewed review.",
+          "sources": []
+        },
+        "food": {
+          "summary": "A case report links heavy grapefruit juice intake to opioid toxicity in a person on methadone, though studies generally find no clinically significant effect.",
+          "evidence": "thin",
+          "detail": "Grapefruit juice blocks CYP3A4, an enzyme that helps break down methadone. In the reported case, a person on 90 mg of methadone daily who drank about 500 mL of grapefruit juice a day for three days developed signs of opioid toxicity. The authors describe it as the first such case and note that studies have generally not found clinically significant effects. Interaction questions belong with a pharmacist or prescriber.",
+          "sources": [
+            { "title": "Opioid toxidrome following grapefruit juice consumption (case report)", "url": "https://researchdiscovery.drexel.edu/esploro/outputs/journalArticle/Opioid-Toxidrome-Following-Grapefruit-Juice-Consumption/991019168181504721" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "buprenorphine",
+      "name": "Buprenorphine (Suboxone)",
+      "note": "Partial opioid agonist, usually dissolved under the tongue or in the cheek. Suboxone also contains naloxone.",
+      "cells": {
+        "appetite": {
+          "summary": "No research study on appetite and buprenorphine has been found.",
+          "evidence": "needs-source",
+          "detail": "Searches turned up only a company FAQ page saying decreased appetite can occur early on. That is not a study, so it is not used as a source here.",
+          "sources": []
+        },
+        "weight": {
+          "summary": "One large veterans cohort found a smaller weight rise than on methadone, while a 12-week trial reanalysis found no significant change.",
+          "evidence": "mixed",
+          "detail": "In a national cohort of about 3,756 U.S. veterans on buprenorphine, BMI drifted up slightly, projected at roughly 5 lb over a year, about half the methadone figure. A reanalysis of the NIDA CTN-0030 trial (12 weeks of buprenorphine) reported no significant weight change. Differences in study length and population likely explain part of the gap. More research is needed.",
+          "sources": [
+            { "title": "Weight change in U.S. veterans on medication for OUD (study summary)", "url": "https://www.centreforevidence.org/article/20231013-weight-change-in-a-national-cohort-of-u-s-military-veterans-engaged-in-medication-treatment-for-opioid-use-disorder" },
+            { "title": "Do medications for opioid use disorder cause weight gain? (ATTC Network summary)", "url": "https://attcnetwork.org/asme_articles/do-medications-for-opioid-use-disorder-cause-weight-gain/" }
+          ]
+        },
+        "gi": {
+          "summary": "No controlled study quantifying gut effects of buprenorphine has been found.",
+          "evidence": "needs-source",
+          "detail": "Only a secondary source (a company FAQ) mentioned nausea, vomiting and constipation, mostly early in treatment. For rates, look at the buprenorphine prescribing information or a published review.",
+          "sources": []
+        },
+        "food": {
+          "summary": "Instructions for the cheek film say not to eat or drink until it has fully dissolved; dedicated food-effect data was not found.",
+          "evidence": "thin",
+          "detail": "The Mayo Clinic drug page for sublingual and buccal buprenorphine advises not eating or drinking until the film has fully dissolved, which usually takes about 30 minutes. That page is patient information, not a study, and it covers the film product. Instructions can differ by product, so ask the prescriber or pharmacist about yours.",
+          "sources": [
+            { "title": "Buprenorphine (buccal mucosa route, sublingual route) - Mayo Clinic", "url": "https://www.mayoclinic.org/drugs-supplements/buprenorphine-buccal-mucosa-route-sublingual-route/proper-use/drg-20074237" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "naltrexone",
+      "name": "Naltrexone (Vivitrol)",
+      "note": "Opioid blocker (antagonist), given as a monthly injection in the extended-release form.",
+      "cells": {
+        "appetite": {
+          "summary": "Reduced appetite is listed among reported side effects, but no study measuring it has been found.",
+          "evidence": "thin",
+          "detail": "News coverage of the FDA approval lists nausea, fatigue, headache, dizziness, vomiting and reduced appetite among side effects. That is a list of reported events, not a measured effect size. Check the current prescribing information for rates.",
+          "sources": [
+            { "title": "FDA okays long-acting naltrexone (MDedge news coverage)", "url": "https://mdedge.com/content/fda-okays-long-acting-naltrexone" }
+          ]
+        },
+        "weight": {
+          "summary": "The only data found are tiny: a long-term safety extension reported very few weight-related events.",
+          "evidence": "thin",
+          "detail": "In a long-term safety extension study, weight loss occurred in 2 of 92 people on extended-release naltrexone, and weight increase in 0 of 92. With numbers this small, no rate of weight change can be established. A small chart review comparing methadone and naltrexone found no statistically different weight-gain course between them, but it included only 36 people.",
+          "sources": [
+            { "title": "Long-term safety of Vivitrol (ClinicalTrials.gov NCT00156936)", "url": "https://clinicaltrials.gov/study/NCT00156936" },
+            { "title": "Methadone vs naltrexone weight chart review (PMC)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3111025" }
+          ]
+        },
+        "gi": {
+          "summary": "Nausea is commonly reported after the first injection; it is usually mild and tends to fade within days.",
+          "evidence": "thin",
+          "detail": "Reports describe nausea after the first injection that is generally mild and fades within a few days, and is less common with later injections. Vomiting is also on the list of reported side effects. These come from news and patient-information summaries, so check the prescribing information for exact rates.",
+          "sources": [
+            { "title": "FDA okays long-acting naltrexone (MDedge news coverage)", "url": "https://mdedge.com/content/fda-okays-long-acting-naltrexone" },
+            { "title": "Vivitrol overview (GoodRx)", "url": "https://www.goodrx.com/vivitrol/what-is" }
+          ]
+        },
+        "food": {
+          "summary": "No source has been found on food interactions with the injection.",
+          "evidence": "needs-source",
+          "detail": "No source was found. Because the extended-release form is injected rather than swallowed, food is not obviously relevant, but that is an inference, not a finding. Ask a pharmacist.",
+          "sources": []
+        }
+      }
+    }
+  ]
+}
