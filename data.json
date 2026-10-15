@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "MOUD and eating: what the research says",
+    "title": "MOUD, Food, and Metabolism",
     "disclaimer": "This page summarizes published research for learning purposes. It is not medical advice. Nobody should change a medication or a diet because of anything here. Talk with a prescriber, pharmacist, or dietitian.",
+    "footnote": "MOUD stands for medications for opioid use disorder. OUD stands for opioid use disorder. This page covers three MOUD: methadone, buprenorphine, and naltrexone.",
     "last_updated": "2026-10-15",
     "strength_levels": [
       {
@@ -645,7 +646,7 @@
     {
       "id": "nolan2007",
       "citation": "Nolan LJ, Scagnelli LM. Preference for sweet foods and higher body mass index in patients being treated in long-term methadone maintenance. Substance Use and Misuse. 2007;42:1555-1566.",
-      "url": null,
+      "url": "https://www.tandfonline.com/doi/full/10.1080/10826080701517727",
       "publication_type": "peer-reviewed",
       "note": "Pilot study, 14 patients and 14 controls, data collected in 2002."
     },

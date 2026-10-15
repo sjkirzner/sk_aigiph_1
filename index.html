@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>MOUD and Eating Research</title>
+<title>MOUD, Food, and Metabolism</title>
 <link rel="icon" href="data:,">
 <style>
   /* STEP 1: colour "tokens", defined once. Dark mode redefines the same names. */
@@ -64,6 +64,7 @@
     margin: 0 0 1rem;
   }
   .disclaimer strong { display: block; margin-bottom: 0.25rem; }
+  .footnote { font-size: 0.85rem; color: var(--muted); margin: -0.5rem 0 1rem; }
 
   .legend { margin: 0.5rem 0 1rem; padding: 0; list-style: none; display: grid; gap: 0.5rem; }
   .legend li { display: flex; gap: 0.5rem; align-items: baseline; flex-wrap: wrap; }
@@ -158,6 +159,7 @@
     <strong id="disc-head">Please read first: not medical advice</strong>
     <span id="disclaimer"></span>
   </div>
+  <p class="footnote" id="footnote" hidden></p>
 
   <p>Each box gives a one-sentence summary and an evidence label. Select a box to see details, caveats, and sources.</p>
   <h2>Evidence labels</h2>
@@ -282,6 +284,11 @@ function render(data) {
   document.title = data.meta.title;
   document.getElementById("updated").textContent = "Last updated " + data.meta.last_updated;
   document.getElementById("disclaimer").textContent = data.meta.disclaimer;
+  if (data.meta.footnote) {
+    const fn = document.getElementById("footnote");
+    fn.textContent = data.meta.footnote;
+    fn.hidden = false;
+  }
 
   for (const l of data.meta.strength_levels) LEVELS[l.id] = l;
   for (const s of data.sources) SOURCES[s.id] = s;
