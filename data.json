@@ -41,14 +41,14 @@
   },
   "medications": [
     {
+      "id": "buprenorphine",
+      "name": "Buprenorphine (Suboxone)",
+      "note": "Partial opioid agonist, often combined with naloxone. Suboxone is a brand-name combination of buprenorphine and naloxone."
+    },
+    {
       "id": "methadone",
       "name": "Methadone",
       "note": "Full opioid agonist, usually given daily at a clinic."
-    },
-    {
-      "id": "buprenorphine",
-      "name": "Buprenorphine (Suboxone)",
-      "note": "Partial opioid agonist, often combined with naloxone."
     },
     {
       "id": "naltrexone",
@@ -59,7 +59,7 @@
   "topics": [
     {
       "id": "appetite",
-      "name": "Appetite and food desire"
+      "name": "Appetite and food cravings"
     },
     {
       "id": "weight_direction",

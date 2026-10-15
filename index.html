@@ -17,11 +17,22 @@
     --accent: #0b5cad;
     --warn-bg: #fff4d6;
     --warn-border: #b27a00;
+    --note-bg: #eef0f3;
 
-    --strong-bg: #d9f2df;  --strong-fg: #0d4a1f;
-    --mixed-bg:  #ffe9bf;  --mixed-fg:  #5a3a00;
-    --thin-bg:   #dbe9fb;  --thin-fg:   #10366b;
+    /* EVIDENCE-STRENGTH colours. These carry meaning, so nothing else on the
+       page uses them. No green: dark solid = strong, amber = mixed, red = thin
+       (caution), dashed grey = needs source. Each also has its own symbol. */
+    --strong-bg: #1f2933;  --strong-fg: #ffffff;
+    --mixed-bg:  #ffe4a8;  --mixed-fg:  #5a3a00;
+    --thin-bg:   #fde8e8;  --thin-fg:   #9b1c1c;
     --none-bg:   #ececec;  --none-fg:   #3b3b3b;
+
+    /* DECORATION colours (blue and green family). Meaning-free: titles,
+       headings, hover/selected states, links, and the four layer sections. */
+    --blue:   #0b5cad;  --blue-tint:   #e8f1fb;
+    --green:  #1a6b35;  --green-tint:  #e6f4ea;
+    --teal:   #0b6e6c;  --teal-tint:   #e2f3f2;
+    --indigo: #4338ca;  --indigo-tint: #ecedfc;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -33,11 +44,17 @@
       --accent: #7ab6f5;
       --warn-bg: #3a2f10;
       --warn-border: #d9a321;
+      --note-bg: #262b31;
 
-      --strong-bg: #17381f;  --strong-fg: #a9e9b9;
+      --strong-bg: #e8eaed;  --strong-fg: #14171a;
       --mixed-bg:  #46340a;  --mixed-fg:  #ffd98a;
-      --thin-bg:   #14305a;  --thin-fg:   #b4d3ff;
+      --thin-bg:   #4a1717;  --thin-fg:   #ffb4b4;
       --none-bg:   #2a2d31;  --none-fg:   #c3c8cd;
+
+      --blue:   #7ab6f5;  --blue-tint:   #16273a;
+      --green:  #7fd49a;  --green-tint:  #15291d;
+      --teal:   #5fd6cf;  --teal-tint:   #12292a;
+      --indigo: #a9b4ff;  --indigo-tint: #1d2040;
     }
   }
 
@@ -50,10 +67,16 @@
     font: 1rem/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
   main { max-width: 84rem; margin: 0 auto; padding: 1rem; }
-  h1 { font-size: 1.6rem; line-height: 1.2; margin: 0.5rem 0; }
-  h2 { font-size: 1.25rem; margin: 0 0 0.25rem; }
+  h1 { font-size: 1.6rem; line-height: 1.2; margin: 0.5rem 0; color: var(--blue); }
+  /* Decorative blue-to-green bar under the page title. */
+  h1::after {
+    content: ""; display: block; height: 5px; width: min(100%, 14rem);
+    margin-top: 0.5rem; border-radius: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--green));
+  }
+  h2 { font-size: 1.25rem; margin: 0 0 0.25rem; color: var(--blue); }
   .muted { color: var(--muted); }
-  a { color: var(--accent); }
+  a { color: var(--blue); }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
   .disclaimer {
@@ -78,7 +101,7 @@
   /* --cols is set by the script from the number of topics in data.json. */
   @media (min-width: 70rem) {
     .layout-row, .col-heads { display: grid; grid-template-columns: 10rem repeat(var(--cols, 4), minmax(0, 1fr)); gap: 0.75rem; align-items: start; }
-    .col-heads { font-weight: 700; padding-bottom: 0.25rem; border-bottom: 2px solid var(--border); }
+    .col-heads { font-weight: 700; padding-bottom: 0.25rem; border-bottom: 2px solid var(--blue); color: var(--blue); }
     .col-heads span:first-child { visibility: hidden; }
     .cells { display: contents; }
     .drug { margin: 0.75rem 0; padding-top: 0.75rem; border-top: 1px solid var(--border); }
@@ -93,6 +116,22 @@
 
   /* Extra sections (recovery phase, setting, ...) use a flexible card grid. */
   .layer { margin: 2.5rem 0; }
+  /* The four themed sections each get their own accent colour. Decoration
+     only: these hues are kept separate from the evidence-strength colours. */
+  .layer[data-layer] {
+    --accent-layer: var(--blue); --tint: var(--blue-tint);
+    background: var(--tint);
+    border-left: 6px solid var(--accent-layer);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  .layer[data-layer="recovery_phase"] { --accent-layer: var(--blue);   --tint: var(--blue-tint); }
+  .layer[data-layer="setting"]        { --accent-layer: var(--green);  --tint: var(--green-tint); }
+  .layer[data-layer="food_access"]    { --accent-layer: var(--teal);   --tint: var(--teal-tint); }
+  .layer[data-layer="who_gains_more"] { --accent-layer: var(--indigo); --tint: var(--indigo-tint); }
+  .layer[data-layer] h2 { color: var(--accent-layer); }
+  .layer-cell .cell-title { color: var(--accent-layer); }
+  .grid-cell .cell-title { color: var(--blue); }
   .layer-cells {
     display: grid; gap: 0.75rem; align-items: start; margin-top: 0.75rem;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
@@ -111,6 +150,12 @@
     display: block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--accent);
   }
   details.cell[open] summary::after { content: "Show less \25B4"; }
+  /* Hover and selected (open) states use the section's accent colour. */
+  details.cell:hover { border-color: var(--accent-layer, var(--blue)); }
+  details.cell[open] {
+    border-color: var(--accent-layer, var(--blue));
+    box-shadow: inset 5px 0 0 var(--accent-layer, var(--blue));
+  }
   .summary-text { display: block; margin-bottom: 0.5rem; }
   .more { padding: 0 0.75rem 0.75rem; border-top: 1px solid var(--border); }
   .more p { margin: 0.75rem 0; }
@@ -120,7 +165,7 @@
   .facts { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.75rem; margin: 0.75rem 0; font-size: 0.92rem; }
   .facts dt { font-weight: 700; color: var(--muted); }
   .facts dd { margin: 0; }
-  .caveat { border-left: 4px solid var(--warn-border); background: var(--warn-bg); padding: 0.5rem 0.75rem; border-radius: 4px; margin: 0.75rem 0; }
+  .caveat { border-left: 4px solid var(--muted); background: var(--note-bg); padding: 0.5rem 0.75rem; border-radius: 4px; margin: 0.75rem 0; }
   .src-note { display: block; color: var(--muted); font-size: 0.88rem; }
   .no-source { color: var(--muted); font-style: italic; }
 
@@ -129,9 +174,9 @@
     display: inline-block; padding: 0.1rem 0.6rem; border-radius: 999px;
     font-size: 0.85rem; font-weight: 700; border: 1px solid currentColor;
   }
-  .badge-strong { background: var(--strong-bg); color: var(--strong-fg); }
+  .badge-strong { background: var(--strong-bg); color: var(--strong-fg); border-color: var(--strong-bg); }
   .badge-mixed  { background: var(--mixed-bg);  color: var(--mixed-fg); }
-  .badge-thin   { background: var(--thin-bg);   color: var(--thin-fg); }
+  .badge-thin   { background: var(--thin-bg);   color: var(--thin-fg); border-width: 2px; }
   .badge-needs-source { background: transparent; color: var(--none-fg); border-style: dashed; font-style: italic; }
 
   /* "Needs source" cells look clearly different: dashed border and hatching. */
@@ -201,7 +246,7 @@ function el(tag, className, text) {
 
 // data.json uses "needs_source"; CSS class names use "needs-source".
 const cssName = id => id.replace(/_/g, "-");
-const SYMBOLS = { "strong": "✓", "mixed": "◐", "thin": "◔", "needs_source": "?" };
+const SYMBOLS = { "strong": "✓", "mixed": "◐", "thin": "\u25B2", "needs_source": "?" };
 
 let LEVELS = {};    // id -> {label, meaning}
 let SOURCES = {};   // id -> source object
@@ -341,6 +386,7 @@ function render(data) {
   for (const layer of data.layers) {
     const section = el("section", "layer");
     section.setAttribute("aria-labelledby", "l-" + layer.id);
+    section.dataset.layer = layer.id;   // lets the CSS give each section its own accent
     const h = el("h2", null, layer.title);
     h.id = "l-" + layer.id;
     const wrap = el("div", "layer-cells");
