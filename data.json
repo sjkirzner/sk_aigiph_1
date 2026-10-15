@@ -4,28 +4,79 @@
     "disclaimer": "This page summarizes published research for learning purposes. It is not medical advice. Nobody should change a medication or a diet because of anything here. Talk with a prescriber, pharmacist, or dietitian.",
     "last_updated": "2026-10-15",
     "strength_levels": [
-      { "id": "strong", "label": "Strong", "meaning": "Consistent direction across several studies, including some larger or controlled ones." },
-      { "id": "mixed", "label": "Mixed", "meaning": "Studies disagree, or results depend heavily on who was studied." },
-      { "id": "thin", "label": "Thin", "meaning": "Only a few small studies, case reports, or secondhand reports." },
-      { "id": "needs_source", "label": "Needs source", "meaning": "Not yet researched. Do not treat as a finding." }
+      {
+        "id": "strong",
+        "label": "Strong",
+        "meaning": "Consistent direction across several studies, including some larger or controlled ones."
+      },
+      {
+        "id": "mixed",
+        "label": "Mixed",
+        "meaning": "Studies disagree, or results depend heavily on who was studied."
+      },
+      {
+        "id": "thin",
+        "label": "Thin",
+        "meaning": "Only a few small studies, case reports, or secondhand reports."
+      },
+      {
+        "id": "needs_source",
+        "label": "Needs source",
+        "meaning": "Not yet researched. Do not treat as a finding."
+      }
     ],
-    "evidence_types": ["human trial", "human observational", "animal or mechanism", "review", "clinical observation"],
-    "publication_types": ["peer-reviewed", "abstract or report", "thesis"]
+    "evidence_types": [
+      "human trial",
+      "human observational",
+      "animal or mechanism",
+      "review",
+      "clinical observation"
+    ],
+    "publication_types": [
+      "peer-reviewed",
+      "abstract or report",
+      "thesis"
+    ]
   },
-
   "medications": [
-    { "id": "methadone", "name": "Methadone", "note": "Full opioid agonist, usually given daily at a clinic." },
-    { "id": "buprenorphine", "name": "Buprenorphine (Suboxone)", "note": "Partial opioid agonist, often combined with naloxone." },
-    { "id": "naltrexone", "name": "Naltrexone (Vivitrol)", "note": "Opioid antagonist. Vivitrol is the monthly injection. Most human weight data are for naltrexone in general, not Vivitrol specifically." }
+    {
+      "id": "methadone",
+      "name": "Methadone",
+      "note": "Full opioid agonist, usually given daily at a clinic."
+    },
+    {
+      "id": "buprenorphine",
+      "name": "Buprenorphine (Suboxone)",
+      "note": "Partial opioid agonist, often combined with naloxone."
+    },
+    {
+      "id": "naltrexone",
+      "name": "Naltrexone (Vivitrol)",
+      "note": "Opioid antagonist. Vivitrol is the monthly injection. Most human weight data are for naltrexone in general, not Vivitrol specifically."
+    }
   ],
-
   "topics": [
-    { "id": "appetite", "name": "Appetite and food desire" },
-    { "id": "weight", "name": "Weight" },
-    { "id": "gi", "name": "Stomach and gut effects" },
-    { "id": "food_interactions", "name": "Food and drink interactions" }
+    {
+      "id": "appetite",
+      "name": "Appetite and food desire"
+    },
+    {
+      "id": "weight_direction",
+      "name": "Weight: does it go up?"
+    },
+    {
+      "id": "weight_amount",
+      "name": "Weight: how much?"
+    },
+    {
+      "id": "gi",
+      "name": "Stomach and gut effects"
+    },
+    {
+      "id": "food_interactions",
+      "name": "Food and drink interactions"
+    }
   ],
-
   "cells": [
     {
       "id": "methadone-appetite",
@@ -39,21 +90,43 @@
       "population": "Outpatient methadone patients in the US, about 50 months in treatment on average",
       "duration": "One-time survey",
       "caveat": "Self-report only. Patients and controls were tested in different places. Cannot separate the drug from heroin history or pre-existing taste.",
-      "sources": ["nolan2007"]
+      "sources": [
+        "nolan2007"
+      ]
     },
     {
-      "id": "methadone-weight",
+      "id": "methadone-weight-direction",
       "medication": "methadone",
-      "topic": "weight",
-      "summary": "Weight gain on methadone is consistently reported, but how much varies a lot between studies.",
-      "detail": "A scoping review of 21 studies found 6-month gains ranging from 4.2 to 23.4 lb. A meta-analysis of 4 longitudinal studies (362 patients) found BMI rose 2.2 to 5.4 after at least a year. The largest randomized trial (about 500 on methadone) found only about a 1.2 BMI rise in 12 months. US studies tended to show larger gains than European ones. Most patients started in the normal weight range, not underweight.",
+      "topic": "weight_direction",
+      "summary": "Weight gain on methadone is reported consistently across studies.",
+      "detail": "A scoping review of 21 studies (16 on methadone) found that every study reporting pounds gained showed a statistically significant increase, and 9 of 11 studies reporting BMI showed a significant rise. A meta-analysis of 4 longitudinal studies (362 patients) found BMI went up in all of them. Even the largest randomized trial, which found a small change, showed a rise.",
       "strength": "strong",
       "evidence_type": "review",
       "publication_type": "peer-reviewed",
-      "population": "Mostly men, mixed countries, many studies did not report race",
+      "population": "Mostly men, many countries, many studies did not report race",
       "duration": "3 months to 4 years",
-      "caveat": "The direction is consistent, but the size is uncertain. About half the studies had under 50 people, many were uncontrolled, and some were conference abstracts. Studies often required patients to stay in treatment, which may select for people who differ from those who leave.",
-      "sources": ["carr2023", "manza2022"]
+      "caveat": "Strong here means the direction is consistent, not that the size is known (see the next cell). About half of the studies had under 50 people, many were uncontrolled, and some were conference abstracts. Publication bias cannot be ruled out, and studies often required patients to stay in treatment, which may select for people who differ from those who leave.",
+      "sources": [
+        "carr2023",
+        "manza2022"
+      ]
+    },
+    {
+      "id": "methadone-weight-amount",
+      "medication": "methadone",
+      "topic": "weight_amount",
+      "summary": "How much weight people gain on methadone varies widely between studies.",
+      "detail": "Six-month gains in the scoping review ranged from 4.2 to 23.4 lb. BMI rose 0.3 to 4.8 in the first year across studies, and a meta-analysis found 2.2 to 5.4 after at least a year. The largest randomized trial (about 500 on methadone) found about a 1.2 BMI rise in 12 months, while one 36-month US study found a 5.4 rise. US studies tended to show larger gains than European ones. Whether sex, methadone dose, cocaine use, or race change the amount is unsettled (see the Who gains more weight section).",
+      "strength": "mixed",
+      "evidence_type": "review",
+      "publication_type": "peer-reviewed",
+      "population": "Mixed countries; mostly normal-weight at the start of treatment",
+      "duration": "3 months to 4 years",
+      "caveat": "Studies used different follow-up lengths, outcome measures, and populations, so the numbers are not directly comparable. The scoping review notes that it is unknown what share of patients gain a clinically significant amount.",
+      "sources": [
+        "carr2023",
+        "manza2022"
+      ]
     },
     {
       "id": "methadone-gi",
@@ -67,7 +140,10 @@
       "population": "People with opioid dependence, not specific to methadone",
       "duration": "Not specified",
       "caveat": "Comes from review statements about opioids in general. A primary study on methadone and constipation (Haber 2017, cited in Manza 2022) has not been read yet.",
-      "sources": ["garcia2025", "migdanis2023"]
+      "sources": [
+        "garcia2025",
+        "migdanis2023"
+      ]
     },
     {
       "id": "methadone-food",
@@ -83,7 +159,6 @@
       "caveat": null,
       "sources": []
     },
-
     {
       "id": "buprenorphine-appetite",
       "medication": "buprenorphine",
@@ -96,21 +171,43 @@
       "population": "Outpatients on long-term buprenorphine or methadone",
       "duration": "Cross-sectional or 2 to 3 years",
       "caveat": "Secondhand. The original studies (Elman 2020, Ochalek 2021) have not been read. Also means any sweet preference on methadone may not be specific to methadone.",
-      "sources": ["manza2022"]
+      "sources": [
+        "manza2022"
+      ]
     },
     {
-      "id": "buprenorphine-weight",
+      "id": "buprenorphine-weight-direction",
       "medication": "buprenorphine",
-      "topic": "weight",
-      "summary": "Evidence is mixed. A 12-week trial found no weight change, but other studies report gain.",
-      "detail": "In a re-analysis of a 12-week trial (360 people dependent on prescription opioids), average weight change was about 0.2 lb, not significant, with no sex difference. A cohort of 107 patients reported about 10 lb gained over 4 months, and one case report described 50 lb in 3 months. A scoping review concluded there is little data supporting or refuting weight gain on buprenorphine.",
+      "topic": "weight_direction",
+      "summary": "Unclear. A 12-week trial found no weight change, but other studies report gain.",
+      "detail": "In a re-analysis of a 12-week trial (360 people dependent on prescription opioids), average weight change was about 0.2 lb, not significant. A cohort of 107 patients reported gain over 4 months, and one case report described a large gain. A scoping review concluded there is little data supporting or refuting weight gain on buprenorphine/naloxone.",
       "strength": "mixed",
       "evidence_type": "human trial",
       "publication_type": "peer-reviewed",
-      "population": "Trial: prescription opioid dependence. Cohort: Turkey. The methadone studies mostly involved heroin.",
+      "population": "Trial: prescription opioid dependence, US. Cohort: Turkey. The methadone studies mostly involved heroin.",
       "duration": "4 weeks to 4 months",
       "caveat": "The trial is short and its participants differ from the methadone studies, so the two cannot be compared directly. The authors say they know of no other randomized trial of weight on buprenorphine.",
-      "sources": ["manza2022", "carr2023"]
+      "sources": [
+        "manza2022",
+        "carr2023"
+      ]
+    },
+    {
+      "id": "buprenorphine-weight-amount",
+      "medication": "buprenorphine",
+      "topic": "weight_amount",
+      "summary": "Too little data to say. Reported amounts range from about 0.2 lb to about 10 lb.",
+      "detail": "The 12-week trial found an average change of about 0.2 lb. A cohort of 107 patients reported about 10 lb gained over 4 months. A single case report described a 50 lb gain in 3 months.",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Mixed; see the direction cell",
+      "duration": "4 weeks to 4 months",
+      "caveat": "Only one cohort and one case report beyond the trial. A case report cannot show what is typical.",
+      "sources": [
+        "manza2022",
+        "carr2023"
+      ]
     },
     {
       "id": "buprenorphine-gi",
@@ -124,7 +221,9 @@
       "population": "People with opioid dependence",
       "duration": "Not specified",
       "caveat": "Stated for opioids generally. Needs a drug-specific source such as the label or Haber 2017.",
-      "sources": ["garcia2025"]
+      "sources": [
+        "garcia2025"
+      ]
     },
     {
       "id": "buprenorphine-food",
@@ -140,7 +239,6 @@
       "caveat": null,
       "sources": []
     },
-
     {
       "id": "naltrexone-appetite",
       "medication": "naltrexone",
@@ -152,22 +250,45 @@
       "publication_type": "peer-reviewed",
       "population": "Animal models and human lab studies; populations not specified in the sources",
       "duration": "Not specified",
-      "caveat": "Secondhand through two reviews. The human weight data in OUD patients did not show the loss this mechanism would predict (see the weight cell).",
-      "sources": ["garcia2025", "nolan2007"]
+      "caveat": "Secondhand through two reviews. The human weight data in OUD patients did not show the loss this mechanism would predict (see the weight cells).",
+      "sources": [
+        "garcia2025",
+        "nolan2007"
+      ]
     },
     {
-      "id": "naltrexone-weight",
+      "id": "naltrexone-weight-direction",
       "medication": "naltrexone",
-      "topic": "weight",
-      "summary": "The little human data show weight gain, not the weight loss the drug's mechanism would predict.",
-      "detail": "A chart review of 36 patients (20 naltrexone, 16 methadone) found no statistically different weight course between them: naltrexone patients gained about 4.6% at 3 months and 6.7% at 6 months, methadone patients 1.9% and 3.7%, with roughly 10 lb gained in both groups by 6 months. A case report describes a 33 lb gain on naltrexone. Naltrexone is a component of the weight loss drug Contrave, so the authors of a scoping review called these findings unexpected.",
+      "topic": "weight_direction",
+      "summary": "The little human data show weight gain, not the loss the drug's mechanism would predict.",
+      "detail": "A chart review of 36 patients (20 naltrexone, 16 methadone) found no statistically different weight course between the two, and both groups gained. A case report describes a large gain on naltrexone. Naltrexone is a component of the weight loss drug Contrave, so the authors of a scoping review called these findings unexpected.",
       "strength": "thin",
       "evidence_type": "human observational",
       "publication_type": "peer-reviewed",
       "population": "Opioid-dependent outpatients, US chart review; one case report from India",
       "duration": "3 to 6 months",
       "caveat": "One small retrospective chart review and one case report. Not specific to the injectable form (Vivitrol).",
-      "sources": ["mysels2011", "carr2023"]
+      "sources": [
+        "mysels2011",
+        "carr2023"
+      ]
+    },
+    {
+      "id": "naltrexone-weight-amount",
+      "medication": "naltrexone",
+      "topic": "weight_amount",
+      "summary": "In one small chart review, gain was about 10 lb over 6 months, similar to methadone.",
+      "detail": "Naltrexone patients gained about 4.6% of body weight at 3 months and 6.7% at 6 months, versus 1.9% and 3.7% for methadone patients. The review's discussion describes roughly 10 lb gained in both groups over 6 months. A case report describes a 33 lb gain.",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Opioid-dependent outpatients, US",
+      "duration": "3 to 6 months",
+      "caveat": "One study of 36 people, with no control for other factors reported in our sources. The case report cannot show what is typical.",
+      "sources": [
+        "mysels2011",
+        "carr2023"
+      ]
     },
     {
       "id": "naltrexone-gi",
@@ -198,7 +319,6 @@
       "sources": []
     }
   ],
-
   "layers": [
     {
       "id": "recovery_phase",
@@ -216,7 +336,12 @@
           "population": "Mixed substances, mostly opioids",
           "duration": "Not applicable",
           "caveat": "Averages hide subgroups. Some samples had many underweight patients.",
-          "sources": ["garcia2025", "migdanis2023", "carr2023", "manza2022"]
+          "sources": [
+            "garcia2025",
+            "migdanis2023",
+            "carr2023",
+            "manza2022"
+          ]
         },
         {
           "id": "phase-early-rebound",
@@ -229,7 +354,13 @@
           "population": "Mixed substances; the Lebanese sample was all men",
           "duration": "Weeks to years",
           "caveat": "Cross-sectional designs and self-reported weight limit what can be said about trajectories.",
-          "sources": ["garcia2025", "migdanis2023", "gottfredson2019", "mahboub2023", "carr2023"]
+          "sources": [
+            "garcia2025",
+            "migdanis2023",
+            "gottfredson2019",
+            "mahboub2023",
+            "carr2023"
+          ]
         },
         {
           "id": "phase-sweet-desire",
@@ -242,7 +373,11 @@
           "population": "Mixed; most direct evidence is from methadone patients or alcohol",
           "duration": "Mostly cross-sectional",
           "caveat": "Desire is not the same as intake or weight gain. See the next two cells.",
-          "sources": ["nolan2007", "garcia2025", "gottfredson2019"]
+          "sources": [
+            "nolan2007",
+            "garcia2025",
+            "gottfredson2019"
+          ]
         },
         {
           "id": "phase-sweet-intake",
@@ -255,7 +390,10 @@
           "population": "Men in outpatient OST and residential rehab (Lebanon); older studies cited secondhand",
           "duration": "Single 24-hour recall",
           "caveat": "A single recall may not reflect usual intake. The older sugar-intake studies (for example Zador 1996, Morabia 1989) need to be read directly.",
-          "sources": ["mahboub2023", "nolan2007"]
+          "sources": [
+            "mahboub2023",
+            "nolan2007"
+          ]
         },
         {
           "id": "phase-addiction-transfer",
@@ -268,7 +406,10 @@
           "population": "Mostly alcohol and cocaine, some opioids; 74% women; many in treatment for more than one substance",
           "duration": "Three one-week bursts, six weeks apart",
           "caveat": "One study. It measured cravings for drugs, not for food. Several results were only marginally significant.",
-          "sources": ["gottfredson2019", "garcia2025"]
+          "sources": [
+            "gottfredson2019",
+            "garcia2025"
+          ]
         },
         {
           "id": "phase-desire-weight",
@@ -281,7 +422,10 @@
           "population": "Outpatient methadone and buprenorphine/naloxone patients, US",
           "duration": "Cross-sectional with chart review",
           "caveat": "Small samples. The thesis is not peer-reviewed. Wanting sweets and gaining weight may both occur without one causing the other.",
-          "sources": ["mcdonald2017", "nolan2007"]
+          "sources": [
+            "mcdonald2017",
+            "nolan2007"
+          ]
         },
         {
           "id": "phase-propensity",
@@ -294,7 +438,10 @@
           "population": "Mixed substances (US); men in treatment (Lebanon)",
           "duration": "Weeks to months",
           "caveat": "The odds ratio of about 63 is likely imprecise in a sample of 111. Some components of the score overlap with food addiction symptoms.",
-          "sources": ["gottfredson2019", "mahboub2023"]
+          "sources": [
+            "gottfredson2019",
+            "mahboub2023"
+          ]
         },
         {
           "id": "phase-later",
@@ -307,11 +454,12 @@
           "population": "Mostly alcohol and cocaine",
           "duration": "About 3 months",
           "caveat": "Short follow-up and many participants dropped out of later bursts.",
-          "sources": ["gottfredson2019"]
+          "sources": [
+            "gottfredson2019"
+          ]
         }
       ]
     },
-
     {
       "id": "setting",
       "title": "Setting",
@@ -328,7 +476,9 @@
           "population": "Men in Lebanon",
           "duration": "Cross-sectional",
           "caveat": "Weight change was self-reported. The groups differed in treatment length (5.5 versus 31.6 months), housing, and baseline BMI. The explanations are hypotheses.",
-          "sources": ["mahboub2023"]
+          "sources": [
+            "mahboub2023"
+          ]
         },
         {
           "id": "setting-structured-meals",
@@ -341,11 +491,13 @@
           "population": "Residential treatment centers, not recovery residences",
           "duration": "Weeks to months",
           "caveat": "Reported through a narrative review. Study designs and rigor were not assessed here.",
-          "sources": ["garcia2025", "gottfredson2019"]
+          "sources": [
+            "garcia2025",
+            "gottfredson2019"
+          ]
         }
       ]
     },
-
     {
       "id": "food_access",
       "title": "Food access",
@@ -362,7 +514,9 @@
           "population": "People with substance use disorders, not specific to MOUD",
           "duration": "Not specified",
           "caveat": "Secondhand through a narrative review. This is the least studied layer for people on MOUD specifically.",
-          "sources": ["garcia2025"]
+          "sources": [
+            "garcia2025"
+          ]
         },
         {
           "id": "access-social-determinants",
@@ -375,11 +529,12 @@
           "population": "US patients",
           "duration": "Not applicable",
           "caveat": "This is a proposed explanation, not a tested one.",
-          "sources": ["carr2023"]
+          "sources": [
+            "carr2023"
+          ]
         }
       ]
     },
-
     {
       "id": "who_gains_more",
       "title": "Who gains more weight",
@@ -396,7 +551,10 @@
           "population": "Mostly methadone patients",
           "duration": "12 weeks to 3 years",
           "caveat": "The meta-analysis had only 4 studies.",
-          "sources": ["manza2022", "carr2023"]
+          "sources": [
+            "manza2022",
+            "carr2023"
+          ]
         },
         {
           "id": "who-cocaine",
@@ -409,7 +567,9 @@
           "population": "Methadone patients, US",
           "duration": "Up to 12 months",
           "caveat": "The key studies are conference abstracts.",
-          "sources": ["carr2023"]
+          "sources": [
+            "carr2023"
+          ]
         },
         {
           "id": "who-dose",
@@ -422,7 +582,9 @@
           "population": "Methadone patients",
           "duration": "Months to years",
           "caveat": "Small number of studies.",
-          "sources": ["carr2023"]
+          "sources": [
+            "carr2023"
+          ]
         },
         {
           "id": "who-race",
@@ -435,19 +597,20 @@
           "population": "US methadone patients",
           "duration": "36 months",
           "caveat": "One study. Differences in access to methadone versus buprenorphine may be part of the picture.",
-          "sources": ["carr2023", "manza2022"]
+          "sources": [
+            "carr2023",
+            "manza2022"
+          ]
         }
       ]
     }
   ],
-
   "open_questions": [
     "GI effects and food or drink interactions for each medication: use FDA labels on DailyMed and primary studies.",
     "Vivitrol-specific effects on appetite, nausea, and weight: no sources yet.",
     "Whether rebound appetite explains weight gain on methadone: studies rarely control for starting nutritional status.",
     "How these findings apply to recovery residences specifically: nothing found so far."
   ],
-
   "to_read_next": [
     "Haber et al. 2017, constipation and other symptoms in women and men on methadone and buprenorphine (Drug and Alcohol Dependence 181:132-139)",
     "Yeomans and Gray 2002, opioid peptides and the control of human ingestive behavior (Neuroscience and Biobehavioral Reviews 26:713-728)",
@@ -457,7 +620,6 @@
     "Sweeney et al. 2019 and Fenn et al. 2015, large US methadone weight studies",
     "FDA labels on DailyMed for methadone, buprenorphine, and naltrexone"
   ],
-
   "sources": [
     {
       "id": "gottfredson2019",
