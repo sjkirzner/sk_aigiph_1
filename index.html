@@ -4,11 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>OUD Medications and Appetite</title>
+<title>MOUD and Eating Research</title>
 <link rel="icon" href="data:,">
 <style>
-  /* STEP 1: colour "tokens". Every colour is defined once here, then reused.
-     Dark mode just redefines the same names, so the rest of the CSS never changes. */
+  /* STEP 1: colour "tokens", defined once. Dark mode redefines the same names. */
   :root {
     --bg: #f7f7f4;
     --surface: #ffffff;
@@ -42,7 +41,7 @@
     }
   }
 
-  /* STEP 2: base styles. */
+  /* STEP 2: base styles */
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -52,14 +51,11 @@
   }
   main { max-width: 72rem; margin: 0 auto; padding: 1rem; }
   h1 { font-size: 1.6rem; line-height: 1.2; margin: 0.5rem 0; }
-  h2 { font-size: 1.2rem; margin: 0 0 0.25rem; }
-  .subtitle { color: var(--muted); margin: 0 0 1rem; }
+  h2 { font-size: 1.25rem; margin: 0 0 0.25rem; }
+  .muted { color: var(--muted); }
   a { color: var(--accent); }
-
-  /* Keyboard focus must always be visible. */
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
-  /* STEP 3: the "not medical advice" note, first thing on the page. */
   .disclaimer {
     background: var(--warn-bg);
     border: 2px solid var(--warn-border);
@@ -69,185 +65,212 @@
   }
   .disclaimer strong { display: block; margin-bottom: 0.25rem; }
 
-  /* Legend (the key to the evidence labels). */
-  .legend { margin: 1rem 0; padding: 0; list-style: none; display: grid; gap: 0.5rem; }
+  .legend { margin: 0.5rem 0 1rem; padding: 0; list-style: none; display: grid; gap: 0.5rem; }
   .legend li { display: flex; gap: 0.5rem; align-items: baseline; flex-wrap: wrap; }
-  .legend span.desc { color: var(--muted); }
 
-  /* STEP 4: the grid. Phone first: everything stacks in one column. */
+  /* STEP 3: main grid. Phone first: one column. */
   .drug { margin: 1.5rem 0; }
   .drug-note { color: var(--muted); margin: 0 0 0.75rem; font-size: 0.95rem; }
   .cells { display: grid; gap: 0.75rem; align-items: start; }
   .col-heads { display: none; }
 
-  /* On wider screens: a name column plus four equal columns. */
   @media (min-width: 60rem) {
     .layout-row, .col-heads { display: grid; grid-template-columns: 12rem repeat(4, 1fr); gap: 0.75rem; align-items: start; }
     .col-heads { font-weight: 700; padding-bottom: 0.25rem; border-bottom: 2px solid var(--border); }
     .col-heads span:first-child { visibility: hidden; }
     .cells { display: contents; }
     .drug { margin: 0.75rem 0; padding-top: 0.75rem; border-top: 1px solid var(--border); }
-    /* Column names are shown in the header row, so hide them inside the cells
-       visually. They stay in the page for screen readers. */
-    .col-label {
+    /* In the grid the column name is in the header row, so hide it inside the
+       cell visually (screen readers still read it). */
+    .grid-cell .cell-title {
       position: absolute; width: 1px; height: 1px; overflow: hidden;
       clip: rect(0 0 0 0); white-space: nowrap;
     }
   }
-  .col-label { font-weight: 700; display: block; margin-bottom: 0.25rem; }
+  .cell-title { font-weight: 700; display: block; margin-bottom: 0.25rem; }
 
-  /* STEP 5: one cell. <details> gives free click/keyboard expanding. */
+  /* Extra sections (recovery phase, setting, ...) use a flexible card grid. */
+  .layer { margin: 2.5rem 0; }
+  .layer-cells {
+    display: grid; gap: 0.75rem; align-items: start; margin-top: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  }
+
+  /* STEP 4: one cell. <details> gives free click and keyboard expanding. */
   details.cell {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
   }
-  details.cell summary {
-    cursor: pointer;
-    padding: 0.75rem;
-    list-style: none;
-    display: block;
-  }
+  details.cell summary { cursor: pointer; padding: 0.75rem; list-style: none; display: block; }
   details.cell summary::-webkit-details-marker { display: none; }
   details.cell summary::after {
     content: "Show more \25BE";
-    display: block; margin-top: 0.5rem;
-    font-size: 0.85rem; color: var(--accent);
+    display: block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--accent);
   }
   details.cell[open] summary::after { content: "Show less \25B4"; }
   .summary-text { display: block; margin-bottom: 0.5rem; }
   .more { padding: 0 0.75rem 0.75rem; border-top: 1px solid var(--border); }
   .more p { margin: 0.75rem 0; }
-  .more ul { margin: 0; padding-left: 1.25rem; }
-  .more li { margin-bottom: 0.25rem; overflow-wrap: anywhere; }
+  .more h4 { margin: 0.75rem 0 0.25rem; font-size: 0.95rem; }
+  .more ul, .more ol { margin: 0; padding-left: 1.25rem; }
+  .more li { margin-bottom: 0.5rem; overflow-wrap: anywhere; }
+  .facts { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.75rem; margin: 0.75rem 0; font-size: 0.92rem; }
+  .facts dt { font-weight: 700; color: var(--muted); }
+  .facts dd { margin: 0; }
+  .caveat { border-left: 4px solid var(--warn-border); background: var(--warn-bg); padding: 0.5rem 0.75rem; border-radius: 4px; margin: 0.75rem 0; }
+  .src-note { display: block; color: var(--muted); font-size: 0.88rem; }
   .no-source { color: var(--muted); font-style: italic; }
 
-  /* Evidence label. Each carries a symbol AND a word, so meaning never
-     depends on colour alone. */
+  /* Evidence labels: symbol AND words, so meaning never depends on colour alone. */
   .badge {
-    display: inline-block;
-    padding: 0.1rem 0.6rem;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    border: 1px solid currentColor;
+    display: inline-block; padding: 0.1rem 0.6rem; border-radius: 999px;
+    font-size: 0.85rem; font-weight: 700; border: 1px solid currentColor;
   }
   .badge-strong { background: var(--strong-bg); color: var(--strong-fg); }
   .badge-mixed  { background: var(--mixed-bg);  color: var(--mixed-fg); }
   .badge-thin   { background: var(--thin-bg);   color: var(--thin-fg); }
-  .badge-needs-source {
-    background: transparent; color: var(--none-fg);
-    border-style: dashed;
-    font-style: italic;
-  }
+  .badge-needs-source { background: transparent; color: var(--none-fg); border-style: dashed; font-style: italic; }
 
-  /* "Needs source" cells look visibly different: dashed border, hatched fill. */
+  /* "Needs source" cells look clearly different: dashed border and hatching. */
   details.cell.ev-needs-source {
-    border-style: dashed;
-    border-width: 2px;
-    background-image: repeating-linear-gradient(
-      -45deg, transparent 0 8px, var(--none-bg) 8px 10px);
+    border-style: dashed; border-width: 2px;
+    background-image: repeating-linear-gradient(-45deg, transparent 0 8px, var(--none-bg) 8px 10px);
   }
   details.cell.ev-needs-source .summary-text { font-style: italic; color: var(--muted); }
 
   .status { padding: 1rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
   .status.error { border-color: var(--warn-border); }
   .status code { background: var(--none-bg); padding: 0.1rem 0.3rem; border-radius: 4px; }
-  .review-note { color: var(--muted); font-size: 0.9rem; margin-top: 2rem; }
-
-  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  .plain-list { padding-left: 1.25rem; }
+  .plain-list li { margin-bottom: 0.5rem; overflow-wrap: anywhere; }
+  footer { margin-top: 2rem; }
 </style>
 </head>
 <body>
 <main>
-  <!-- Everything below is empty scaffolding. The JavaScript at the bottom
-       fills it in from data.json. -->
+  <!-- Empty scaffolding. The script at the bottom fills it from data.json. -->
   <h1 id="title">Loading…</h1>
-  <p class="subtitle" id="subtitle"></p>
+  <p class="muted" id="updated"></p>
 
   <div class="disclaimer" role="note" aria-labelledby="disc-head">
     <strong id="disc-head">Please read first: not medical advice</strong>
     <span id="disclaimer"></span>
   </div>
 
-  <p id="how"></p>
+  <p>Each box gives a one-sentence summary and an evidence label. Select a box to see details, caveats, and sources.</p>
   <h2>Evidence labels</h2>
   <ul class="legend" id="legend"></ul>
 
   <div id="status" class="status" role="status">Loading data…</div>
-  <div id="grid" hidden>
+
+  <div id="content" hidden>
     <div class="col-heads" id="col-heads" aria-hidden="true"></div>
     <div id="rows"></div>
-  </div>
+    <div id="layers"></div>
 
-  <p class="review-note" id="review-note"></p>
+    <section class="layer" id="open-section" aria-labelledby="open-h">
+      <h2 id="open-h">Open questions</h2>
+      <ul class="plain-list" id="open"></ul>
+    </section>
+    <section class="layer" id="next-section" aria-labelledby="next-h">
+      <h2 id="next-h">To read next</h2>
+      <ul class="plain-list" id="next"></ul>
+    </section>
+    <section class="layer" aria-labelledby="src-h">
+      <h2 id="src-h">All sources</h2>
+      <ol class="plain-list" id="sources"></ol>
+    </section>
+  </div>
 </main>
 
 <script>
-/* STEP 6: JavaScript. It does three things:
-   1. fetch data.json
-   2. build the page from it
-   3. show a friendly message if something goes wrong
-   Text is always set with textContent (never innerHTML), so nothing in
-   data.json can inject code into the page. */
+/* STEP 5: JavaScript. It fetches data.json, builds the page, and shows a
+   friendly message if something goes wrong. Text is always set with
+   textContent (never innerHTML), so nothing in data.json can inject code. */
 
-// Small helper: make an element, optionally with a class and text.
 function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
-  if (text !== undefined) node.textContent = text;
+  if (text !== undefined && text !== null) node.textContent = text;
   return node;
 }
 
-// Evidence labels: symbol + words (symbol is decorative; the words carry meaning).
-const SYMBOLS = { "strong": "✓", "mixed": "◐", "thin": "◔", "needs-source": "?" };
-function badge(level) {
-  const b = el("span", "badge badge-" + level);
-  const sym = el("span", null, SYMBOLS[level] + " ");
+// data.json uses "needs_source"; CSS class names use "needs-source".
+const cssName = id => id.replace(/_/g, "-");
+const SYMBOLS = { "strong": "✓", "mixed": "◐", "thin": "◔", "needs_source": "?" };
+
+let LEVELS = {};    // id -> {label, meaning}
+let SOURCES = {};   // id -> source object
+
+function badge(levelId) {
+  const level = LEVELS[levelId] || { label: levelId };
+  const b = el("span", "badge badge-" + cssName(levelId));
+  const sym = el("span", null, (SYMBOLS[levelId] || "") + " ");
   sym.setAttribute("aria-hidden", "true");
-  b.append(sym, document.createTextNode(level.replace("-", " ")));
+  b.append(sym, document.createTextNode(level.label));
   return b;
 }
 
-// Only allow normal web links.
 function safeUrl(u) {
   try { const p = new URL(u); return (p.protocol === "https:" || p.protocol === "http:") ? p.href : null; }
   catch (e) { return null; }
 }
 
-function buildCell(column, cell) {
-  const level = cell && cell.evidence ? cell.evidence : "needs-source";
-  const d = el("details", "cell ev-" + level);
+// One source entry: citation (linked if there is a URL), note, publication type.
+function sourceItem(s) {
+  const li = el("li");
+  const href = s.url ? safeUrl(s.url) : null;
+  if (href) {
+    const a = el("a", null, s.citation);
+    a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer";
+    li.append(a, document.createTextNode(" (opens in a new tab)"));
+  } else {
+    li.append(document.createTextNode(s.citation), el("span", "src-note", "No link available."));
+  }
+  const bits = [s.publication_type, s.note].filter(Boolean).join(" — ");
+  if (bits) li.append(el("span", "src-note", bits));
+  return li;
+}
 
+// One expandable cell. `label` is the column name (grid) or title (layers).
+function buildCell(label, cell, kind) {
+  const d = el("details", "cell " + kind + " ev-" + cssName(cell.strength));
   const summary = el("summary");
-  summary.append(
-    el("span", "col-label", column.name),
-    el("span", "summary-text", cell ? cell.summary : "No data yet."),
-    badge(level)
-  );
+  summary.append(el("span", "cell-title", label), el("span", "summary-text", cell.summary), badge(cell.strength));
 
   const more = el("div", "more");
-  more.append(el("p", null, cell ? cell.detail : "No detail available."));
-  const sources = (cell && cell.sources) || [];
-  if (sources.length === 0) {
-    more.append(el("p", "no-source", "No source link yet."));
+  more.append(el("p", null, cell.detail));
+
+  const facts = [
+    ["Evidence type", cell.evidence_type],
+    ["Publication", cell.publication_type],
+    ["Population", cell.population],
+    ["Duration", cell.duration]
+  ].filter(f => f[1]);
+  if (facts.length) {
+    const dl = el("dl", "facts");
+    for (const [k, v] of facts) { dl.append(el("dt", null, k), el("dd", null, v)); }
+    more.append(dl);
+  }
+
+  if (cell.caveat) {
+    const c = el("p", "caveat");
+    c.append(el("strong", null, "Caveat: "), document.createTextNode(cell.caveat));
+    more.append(c);
+  }
+
+  more.append(el("h4", null, "Sources"));
+  const ids = cell.sources || [];
+  if (ids.length === 0) {
+    more.append(el("p", "no-source", "No source yet."));
   } else {
     const ul = el("ul");
-    for (const s of sources) {
-      const href = safeUrl(s.url);
-      const li = el("li");
-      if (href) {
-        const a = el("a", null, s.title);
-        a.href = href;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        li.append(a, document.createTextNode(" (opens in a new tab)"));
-      } else {
-        li.textContent = s.title;
-      }
-      ul.append(li);
+    for (const id of ids) {
+      const s = SOURCES[id];
+      ul.append(s ? sourceItem(s) : el("li", null, id));
     }
-    more.append(el("p", null, "Sources:"), ul);
+    more.append(ul);
   }
   d.append(summary, more);
   return d;
@@ -256,47 +279,77 @@ function buildCell(column, cell) {
 function render(data) {
   document.getElementById("title").textContent = data.meta.title;
   document.title = data.meta.title;
-  document.getElementById("subtitle").textContent = data.meta.subtitle;
+  document.getElementById("updated").textContent = "Last updated " + data.meta.last_updated;
   document.getElementById("disclaimer").textContent = data.meta.disclaimer;
-  document.getElementById("how").textContent = data.meta.howToRead;
-  document.getElementById("review-note").textContent = data.meta.reviewNote;
+
+  for (const l of data.meta.strength_levels) LEVELS[l.id] = l;
+  for (const s of data.sources) SOURCES[s.id] = s;
 
   // Legend
   const legend = document.getElementById("legend");
-  for (const [level, desc] of Object.entries(data.meta.evidenceLevels)) {
+  for (const l of data.meta.strength_levels) {
     const li = el("li");
-    li.append(badge(level), el("span", "desc", desc));
+    li.append(badge(l.id), el("span", "muted", l.meaning));
     legend.append(li);
   }
 
-  // Column headings (desktop only; hidden from screen readers because
-  // each cell carries its own label).
+  // Column headings (desktop only; hidden from screen readers because every
+  // cell carries its own label).
   const heads = document.getElementById("col-heads");
   heads.append(el("span", null, "Medication"));
-  for (const c of data.columns) heads.append(el("span", null, c.name));
+  for (const t of data.topics) heads.append(el("span", null, t.name));
 
-  // One section per medication.
+  // Rows = medications, columns = topics. Find each cell by medication + topic.
   const rows = document.getElementById("rows");
-  for (const row of data.rows) {
+  for (const med of data.medications) {
     const section = el("section", "drug");
-    section.setAttribute("aria-labelledby", "h-" + row.id);
+    section.setAttribute("aria-labelledby", "h-" + med.id);
     const layout = el("div", "layout-row");
 
     const head = el("div");
-    const h = el("h2", null, row.name);
-    h.id = "h-" + row.id;
-    head.append(h, el("p", "drug-note", row.note));
+    const h = el("h2", null, med.name);
+    h.id = "h-" + med.id;
+    head.append(h, el("p", "drug-note", med.note));
 
     const cells = el("div", "cells");
-    for (const col of data.columns) cells.append(buildCell(col, row.cells[col.id]));
-
+    for (const t of data.topics) {
+      const cell = data.cells.find(c => c.medication === med.id && c.topic === t.id);
+      if (cell) {
+        cells.append(buildCell(t.name, cell, "grid-cell"));
+      } else {
+        cells.append(buildCell(t.name, { summary: "No entry yet.", detail: "This cell has no data.", strength: "needs_source", sources: [] }, "grid-cell"));
+      }
+    }
     layout.append(head, cells);
     section.append(layout);
     rows.append(section);
   }
 
+  // Extra sections
+  const layers = document.getElementById("layers");
+  for (const layer of data.layers) {
+    const section = el("section", "layer");
+    section.setAttribute("aria-labelledby", "l-" + layer.id);
+    const h = el("h2", null, layer.title);
+    h.id = "l-" + layer.id;
+    const wrap = el("div", "layer-cells");
+    for (const c of layer.cells) wrap.append(buildCell(c.title, c, "layer-cell"));
+    section.append(h, el("p", "muted", layer.description), wrap);
+    layers.append(section);
+  }
+
+  // Lists at the bottom
+  const fill = (id, items) => {
+    const ul = document.getElementById(id);
+    for (const t of items) ul.append(el("li", null, t));
+  };
+  fill("open", data.open_questions);
+  fill("next", data.to_read_next);
+  const all = document.getElementById("sources");
+  for (const s of data.sources) all.append(sourceItem(s));
+
   document.getElementById("status").hidden = true;
-  document.getElementById("grid").hidden = false;
+  document.getElementById("content").hidden = false;
 }
 
 fetch("data.json")
@@ -305,13 +358,11 @@ fetch("data.json")
   .catch(err => {
     const s = document.getElementById("status");
     s.classList.add("error");
-    s.replaceChildren();
-    s.append(
-      el("p", null, "Could not load data.json (" + err.message + ")."),
-      el("p", null, "If you opened this file by double-clicking it, browsers block fetch() on local files. Start a tiny local server in this folder instead, then open http://localhost:8000")
+    s.replaceChildren(
+      el("p", null, "Could not load or read data.json (" + err.message + ")."),
+      el("p", null, "If you opened this file by double-clicking it, browsers block fetch() on local files. Start a tiny local server in this folder, then open http://localhost:8000"),
+      el("code", null, "python3 -m http.server 8000")
     );
-    const code = el("code", null, "python3 -m http.server 8000");
-    s.append(code);
   });
 </script>
 </body>
