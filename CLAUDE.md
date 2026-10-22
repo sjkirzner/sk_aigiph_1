@@ -7,3 +7,4 @@
 ## Publishing rules
 - Always work on a separate branch, so every change gets a Preview.
 - Never merge into main unless I say "push to production."
+- Unless I say "push to production," make all changes to the preview site first (the copy of the page in the preview/ folder), and leave the public page (index.html and data.json in the root) alone.
