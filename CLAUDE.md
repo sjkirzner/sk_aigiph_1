@@ -2,6 +2,7 @@
 - Write tests for every new feature.
 - Run all tests before finishing any change. Don't push if any fail.
 - Never change or delete a test to make it pass without asking me.
+- Whenever submitting new code, review all existing tests and modify or delete tests that would automatically fail because of what's being changed.
 
 ## Publishing rules
 - Always work on a separate branch, so every change gets a Preview.
