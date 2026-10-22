@@ -1,0 +1,33 @@
+# GitHub Actions workflow. GitHub runs this automatically on its own servers.
+name: Tests
+
+# When to run: on every push (to any branch) and on every pull request.
+on:
+  push:
+  pull_request:
+
+# The workflow only needs to read the code, nothing more.
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # 1. Download this repo's code onto the runner.
+      - uses: actions/checkout@v4
+
+      # 2. Install Node.js (the tests use Node's built-in test runner).
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # 3. Install the project's dev tools (Playwright).
+      - run: npm install
+
+      # 4. Download the headless browser the browser tests use.
+      - run: npx playwright install --with-deps chromium
+
+      # 5. Run all the tests: the same command you run locally.
+      - run: npm test
