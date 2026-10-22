@@ -18,6 +18,7 @@
     --warn-bg: #ffefbf;   /* slightly stronger yellow so the disclaimer stands out on beige */
     --warn-border: #b27a00;
     --note-bg: #eef0f3;
+    --alert-red: #c00000;   /* red lettering for the "not medical advice" box (not the evidence "Thin" red) */
 
     /* EVIDENCE-STRENGTH colours. These carry meaning, so nothing else on the
        page uses them. No green: dark solid = strong, amber = mixed, red = thin
@@ -45,6 +46,7 @@
       --warn-bg: #3a2f10;
       --warn-border: #d9a321;
       --note-bg: #262b31;
+      --alert-red: #ff8080;
 
       --strong-bg: #e8eaed;  --strong-fg: #14171a;
       --mixed-bg:  #46340a;  --mixed-fg:  #ffd98a;
@@ -81,6 +83,8 @@
 
   .disclaimer {
     background: var(--warn-bg);
+    font-size: 2rem;           /* twice the normal text size */
+    color: var(--alert-red);
     border: 2px solid var(--warn-border);
     border-radius: 8px;
     padding: 0.75rem 1rem;
