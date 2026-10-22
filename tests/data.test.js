@@ -70,10 +70,13 @@ test("no cell points at a medication or topic that does not exist", () => {
   }
 });
 
-test("the four themed layer sections exist and have cells (16 in total)", () => {
-  assert.deepEqual(data.layers.map((l) => l.id), ["recovery_phase", "setting", "food_access", "who_gains_more"]);
+test("the five layer sections exist and have cells (21 in total)", () => {
+  assert.deepEqual(
+    data.layers.map((l) => l.id),
+    ["recovery_phase", "setting", "food_access", "who_gains_more", "metabolic_health"]
+  );
   for (const l of data.layers) assert.ok(l.title && l.description && l.cells.length > 0, `layer ${l.id} incomplete`);
-  assert.equal(layerCells.length, 16);
+  assert.equal(layerCells.length, 21);
 });
 
 test("all cell ids are unique", () => {
@@ -94,7 +97,7 @@ test('"needs_source" cells have no evidence fields and no sources', () => {
   // The known gaps right now. When you fill one in, update this list.
   assert.deepEqual(
     gaps.map((c) => c.id).sort(),
-    ["buprenorphine-food", "methadone-food", "naltrexone-food", "naltrexone-gi"]
+    ["buprenorphine-food", "naltrexone-food"]
   );
   for (const c of gaps) {
     assert.deepEqual(c.sources, [], `${c.id}: a needs_source cell must not cite sources`);
