@@ -1,0 +1,838 @@
+{
+  "meta": {
+    "title": "PREVIEW - MOUD, Food, and Metabolism",
+    "disclaimer": "This page summarizes published research for learning purposes. It is not medical advice. Nobody should change a medication or a diet because of anything here. Talk with a prescriber, pharmacist, or dietitian.",
+    "footnote": "MOUD stands for medications for opioid use disorder. OUD stands for opioid use disorder. This page covers three MOUD: methadone, buprenorphine, and naltrexone.",
+    "last_updated": "2026-10-22",
+    "strength_levels": [
+      {
+        "id": "strong",
+        "label": "Strong",
+        "meaning": "Consistent direction across several studies, including some larger or controlled ones."
+      },
+      {
+        "id": "mixed",
+        "label": "Mixed",
+        "meaning": "Studies disagree, or results depend heavily on who was studied."
+      },
+      {
+        "id": "thin",
+        "label": "Thin",
+        "meaning": "Only a few small studies, case reports, or secondhand reports."
+      },
+      {
+        "id": "needs_source",
+        "label": "Needs source",
+        "meaning": "Not yet researched. Do not treat as a finding."
+      }
+    ],
+    "evidence_types": [
+      "human trial",
+      "human observational",
+      "animal or mechanism",
+      "review",
+      "clinical observation"
+    ],
+    "publication_types": [
+      "peer-reviewed",
+      "abstract or report",
+      "thesis"
+    ]
+  },
+  "medications": [
+    {
+      "id": "buprenorphine",
+      "name": "Buprenorphine (Suboxone)",
+      "note": "Partial opioid agonist. Suboxone is a brand-name combination of buprenorphine and naloxone."
+    },
+    {
+      "id": "methadone",
+      "name": "Methadone",
+      "note": "Full opioid agonist, usually given daily at a clinic."
+    },
+    {
+      "id": "naltrexone",
+      "name": "Naltrexone (Vivitrol)",
+      "note": "Opioid antagonist. Vivitrol is the brand name for extended-release injectable naltrexone."
+    }
+  ],
+  "topics": [
+    {
+      "id": "appetite_effects",
+      "name": "Appetite Effects"
+    },
+    {
+      "id": "calorie_dense_cravings",
+      "name": "Calorie-dense Food Cravings"
+    },
+    {
+      "id": "weight_direction",
+      "name": "Weight: does it go up?"
+    },
+    {
+      "id": "weight_amount",
+      "name": "Weight: how much?"
+    },
+    {
+      "id": "gi",
+      "name": "Stomach and gut effects"
+    }
+  ],
+  "cells": [
+    {
+      "id": "buprenorphine-appetite-effects",
+      "medication": "buprenorphine",
+      "topic": "appetite_effects",
+      "summary": "In one lab study, people on methadone or buprenorphine rated sweet solutions much like adults without OUD. The two medications did not clearly differ.",
+      "detail": "In a US study, 40 adults on stable methadone (21) or buprenorphine (19) and 40 adults without OUD tasted six sucrose concentrations under double-blind conditions. Overall liking was lower in the OUD group, but only for the weakest solutions (plain water and the two lowest concentrations), and ratings of sweetness intensity did not differ. Ratings were similar before and about 3 hours after the daily dose. Within the OUD group, methadone and buprenorphine patients were reported not to differ, but the study was not powered for that comparison. A separate cross-sectional study of 26 buprenorphine and 32 methadone patients (Elman 2020) found no difference in BMI categories, body composition, or sweet taste test ratings, and similar shares of 'sweet likers' (50% and 58%).",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Outpatients on buprenorphine or methadone: Vermont (Ochalek) and Massachusetts (Elman), US",
+      "duration": "One day (Ochalek); one-time assessment (Elman)",
+      "caveat": "Both studies are small and cross-sectional. The methadone-versus-buprenorphine comparison in the Vermont study was a secondary analysis, and its reported numbers look duplicated in the paper. Both taste tests used plain sucrose solutions, not real foods, and lab ratings may not reflect everyday eating. The Vermont groups also differed in age, education, income, and tobacco use.",
+      "sources": [
+        "ochalek2021",
+        "elman2020"
+      ]
+    },
+    {
+      "id": "buprenorphine-cravings",
+      "medication": "buprenorphine",
+      "topic": "calorie_dense_cravings",
+      "summary": "In one US study, adults on methadone or buprenorphine who wanted to eat were more eager for unhealthy foods and wanted larger portions of them than comparison adults. Results were not split by medication.",
+      "detail": "Among adults who said they wanted to eat at the time of testing (38% of the OUD group and 50% of comparison adults), those on methadone or buprenorphine were more eager for unhealthy foods, wanted larger portions of them, and wanted smaller portions of healthy foods. The comparison reported is between the OUD group as a whole and comparison adults.",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Adults on a stable methadone or buprenorphine dose for more than 3 months, Vermont, US",
+      "duration": "One screening session",
+      "caveat": "Only about 38% of the OUD group reported wanting to eat, so these ratings come from a subset. The groups differed in age, education, income, and tobacco use. Self-report. The text reviewed gives no separate results for buprenorphine.",
+      "sources": [
+        "ochalek2021"
+      ]
+    },
+    {
+      "id": "buprenorphine-weight-direction",
+      "medication": "buprenorphine",
+      "topic": "weight_direction",
+      "summary": "Unclear. A 12-week trial found no weight change, but other studies report gain.",
+      "detail": "In a re-analysis of a 12-week trial (360 people dependent on prescription opioids), average weight change was about 0.2 lb, not significant. A cohort of 107 patients reported gain over 4 months, and one case report described a large gain. A scoping review concluded there is little data supporting or refuting weight gain on buprenorphine/naloxone. A cross-sectional study of 58 patients found that about 85% of those on buprenorphine and 78% on methadone were overweight or obese, with no significant difference between the drugs. It cannot show whether weight changed after starting treatment.",
+      "strength": "mixed",
+      "evidence_type": "human trial",
+      "publication_type": "peer-reviewed",
+      "population": "Trial: prescription opioid dependence, US. Cohort: Turkey. The methadone studies mostly involved heroin.",
+      "duration": "4 weeks to 4 months",
+      "caveat": "The trial is short and its participants differ from the methadone studies, so the two cannot be compared directly. The authors say they know of no other randomized trial of weight on buprenorphine.",
+      "sources": [
+        "manza2022",
+        "carr2023",
+        "elman2020"
+      ]
+    },
+    {
+      "id": "buprenorphine-weight-amount",
+      "medication": "buprenorphine",
+      "topic": "weight_amount",
+      "summary": "Too little data to say. Reported amounts range from about 0.2 lb to about 10 lb.",
+      "detail": "The 12-week trial found an average change of about 0.2 lb. A cohort of 107 patients reported about 10 lb gained over 4 months. A single case report described a 50 lb gain in 3 months.",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Mixed; see the direction cell",
+      "duration": "4 weeks to 4 months",
+      "caveat": "Only one cohort and one case report beyond the trial. A case report cannot show what is typical.",
+      "sources": [
+        "manza2022",
+        "carr2023"
+      ]
+    },
+    {
+      "id": "buprenorphine-gi",
+      "medication": "buprenorphine",
+      "topic": "gi",
+      "summary": "Opioids slow the gut in general. Buprenorphine-specific evidence has not been reviewed yet.",
+      "detail": "A narrative review states that opioids reduce gastrointestinal motility. It does not separate buprenorphine from other opioids. The introduction of a 2020 study also states that opioids interfere with gut motility and with proper food absorption. A provider guide lists constipation, nausea, and vomiting as commonly reported with buprenorphine and naltrexone, without a specific study.",
+      "strength": "thin",
+      "evidence_type": "review",
+      "publication_type": "peer-reviewed",
+      "population": "People with opioid dependence",
+      "duration": "Not specified",
+      "caveat": "Stated for opioids generally. Needs a drug-specific source such as the label or Haber 2017.",
+      "sources": [
+        "garcia2025",
+        "elman2020",
+        "chavez2020"
+      ]
+    },
+    {
+      "id": "methadone-appetite-effects",
+      "medication": "methadone",
+      "topic": "appetite_effects",
+      "summary": "In one lab study, people on methadone or buprenorphine rated sweet solutions much like adults without OUD. The two medications did not clearly differ.",
+      "detail": "In a US study, 40 adults on stable methadone (21) or buprenorphine (19) and 40 adults without OUD tasted six sucrose concentrations under double-blind conditions. Overall liking was lower in the OUD group, but only for the weakest solutions (plain water and the two lowest concentrations), and ratings of sweetness intensity did not differ. Ratings were similar before and about 3 hours after the daily dose. Within the OUD group, methadone and buprenorphine patients were reported not to differ, but the study was not powered for that comparison. A separate cross-sectional study of 26 buprenorphine and 32 methadone patients (Elman 2020) found no difference in BMI categories, body composition, or sweet taste test ratings, and similar shares of 'sweet likers' (50% and 58%).",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Outpatients on buprenorphine or methadone: Vermont (Ochalek) and Massachusetts (Elman), US",
+      "duration": "One day (Ochalek); one-time assessment (Elman)",
+      "caveat": "These are the same two studies as in the buprenorphine cell, which included people on both medications. Both studies are small and cross-sectional. The methadone-versus-buprenorphine comparison in the Vermont study was a secondary analysis, and its reported numbers look duplicated in the paper. Both taste tests used plain sucrose solutions, not real foods, and lab ratings may not reflect everyday eating. The Vermont groups also differed in age, education, income, and tobacco use.",
+      "sources": [
+        "ochalek2021",
+        "elman2020"
+      ]
+    },
+    {
+      "id": "methadone-cravings",
+      "medication": "methadone",
+      "topic": "calorie_dense_cravings",
+      "summary": "In one small survey, people on methadone reported more eagerness for sweets and larger desired portions than comparison adults.",
+      "detail": "14 methadone patients and 14 community controls answered questionnaires. Patients rated dessert, candy, chocolate, and pizza higher for eagerness, and dessert, chocolate, and candy higher for amount wanted. They also reported healthier habits than controls (more regular meals, more weight watching), which may reflect social desirability. Within the methadone group, treatment length, BMI, and food ratings were not correlated.",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Outpatient methadone patients in the US, about 50 months in treatment on average",
+      "duration": "One-time survey",
+      "caveat": "Self-report only. Patients and controls were tested in different places. Cannot separate the drug from heroin history or pre-existing taste. A later lab study (see the Appetite Effects cells) found sweet-taste ratings similar to adults without OUD, which suggests the difference lies more in everyday eating than in how sweetness tastes.",
+      "sources": [
+        "nolan2007",
+        "ochalek2021"
+      ]
+    },
+    {
+      "id": "methadone-weight-direction",
+      "medication": "methadone",
+      "topic": "weight_direction",
+      "summary": "Weight gain on methadone is reported consistently across studies.",
+      "detail": "A scoping review of 21 studies (16 on methadone) found that every study reporting pounds gained showed a statistically significant increase, and 9 of 11 studies reporting BMI showed a significant rise. A meta-analysis of 4 longitudinal studies (362 patients) found BMI went up in all of them. Even the largest randomized trial, which found a small change, showed a rise.",
+      "strength": "strong",
+      "evidence_type": "review",
+      "publication_type": "peer-reviewed",
+      "population": "Mostly men, many countries, many studies did not report race",
+      "duration": "3 months to 4 years",
+      "caveat": "Strong here means the direction is consistent, not that the size is known (see the next cell). About half of the studies had under 50 people, many were uncontrolled, and some were conference abstracts. Publication bias cannot be ruled out, and studies often required patients to stay in treatment, which may select for people who differ from those who leave.",
+      "sources": [
+        "carr2023",
+        "manza2022"
+      ]
+    },
+    {
+      "id": "methadone-weight-amount",
+      "medication": "methadone",
+      "topic": "weight_amount",
+      "summary": "How much weight people gain on methadone varies widely between studies.",
+      "detail": "Six-month gains in the scoping review ranged from 4.2 to 23.4 lb. BMI rose 0.3 to 4.8 in the first year across studies, and a meta-analysis found 2.2 to 5.4 after at least a year. The largest randomized trial (about 500 on methadone) found about a 1.2 BMI rise in 12 months, while one 36-month US study found a 5.4 rise. US studies tended to show larger gains than European ones. Whether sex, methadone dose, cocaine use, or race change the amount is unsettled (see the Who gains more weight section).",
+      "strength": "mixed",
+      "evidence_type": "review",
+      "publication_type": "peer-reviewed",
+      "population": "Mixed countries; mostly normal-weight at the start of treatment",
+      "duration": "3 months to 4 years",
+      "caveat": "Studies used different follow-up lengths, outcome measures, and populations, so the numbers are not directly comparable. The scoping review notes that it is unknown what share of patients gain a clinically significant amount.",
+      "sources": [
+        "carr2023",
+        "manza2022"
+      ]
+    },
+    {
+      "id": "methadone-gi",
+      "medication": "methadone",
+      "topic": "gi",
+      "summary": "Opioids slow the gut. Constipation is a recognized problem that can reduce eating.",
+      "detail": "A narrative review states that opioids reduce gastrointestinal motility. A nutrition study of people with opioid dependence reported that reduced food intake was often linked to low appetite, stomach problems, and constipation. The introduction of a 2020 study also states that opioids interfere with gut motility and with proper food absorption. A provider guide explains that opioids act on receptors in the gut wall, which slows movement, delays stomach emptying, and causes constipation, which it calls possibly the most common side effect of opioids. It lists dry mouth, abdominal pain, extreme constipation, low potassium, and low magnesium among methadone's nutritionally relevant side effects, and suggests fiber and water.",
+      "strength": "thin",
+      "evidence_type": "review",
+      "publication_type": "peer-reviewed",
+      "population": "People with opioid dependence, not specific to methadone",
+      "duration": "Not specified",
+      "caveat": "Comes from review statements about opioids in general. A primary study on methadone and constipation (Haber 2017, cited in Manza 2022) has not been read yet.",
+      "sources": [
+        "garcia2025",
+        "migdanis2023",
+        "elman2020",
+        "chavez2020"
+      ]
+    },
+    {
+      "id": "naltrexone-appetite-effects",
+      "medication": "naltrexone",
+      "topic": "appetite_effects",
+      "summary": "Opioid blockers reduce food intake and food pleasantness in animal and lab work, but not hunger. Human evidence in people with opioid dependence is mixed.",
+      "detail": "A narrative review reports that nonspecific opioid antagonists such as naloxone and naltrexone reduce intake of energy-dense foods in animals and reduce palatability and intake in humans. A cited review (Yeomans and Gray, 2002) reports that antagonists reduce food intake and pleasantness in humans but have no effect on hunger, mainly for foods rated more pleasant. A 2021 paper describes the preclinical evidence as consistent but the human evidence as mixed. A provider guide proposes that naltrexone and buprenorphine may suppress appetite by blocking feedback that signals the brain to stop eating (Greenway 2009), but it presents this as a possibility and notes these drugs are not well studied for nutrition.",
+      "strength": "thin",
+      "evidence_type": "animal or mechanism",
+      "publication_type": "peer-reviewed",
+      "population": "Animal models and human lab studies; one report involves patients with opioid dependence",
+      "duration": "Not specified",
+      "caveat": "Secondhand through reviews and the introduction of other papers. The human weight data in OUD patients did not show the loss this mechanism would predict (see the weight cells). The guide groups naltrexone with buprenorphine, though buprenorphine is a partial agonist and naltrexone an antagonist, so the proposed mechanism may not apply equally.",
+      "sources": [
+        "garcia2025",
+        "nolan2007",
+        "ochalek2021",
+        "chavez2020"
+      ]
+    },
+    {
+      "id": "naltrexone-cravings",
+      "medication": "naltrexone",
+      "topic": "calorie_dense_cravings",
+      "summary": "One secondhand report suggests long-acting naltrexone reduced the rewarding properties of sugar in patients with opioid dependence. It has not been read directly.",
+      "detail": "The authors of a 2020 study say their group's earlier work found that depot (long-acting injectable) naltrexone reduced the rewarding properties of sugar in patients with opioid dependence (Langleben 2012, not yet read). A 2021 paper describes the preclinical evidence as consistent but the human evidence as mixed.",
+      "strength": "thin",
+      "evidence_type": "animal or mechanism",
+      "publication_type": "peer-reviewed",
+      "population": "Patients with opioid dependence (one secondhand report); animal models",
+      "duration": "Not specified",
+      "caveat": "Secondhand: the human finding comes from the introduction of another paper and the original study has not been read. The sources read here did not measure food cravings in people taking naltrexone directly; the one human report concerns the rewarding properties of sugar.",
+      "sources": [
+        "elman2020",
+        "ochalek2021"
+      ]
+    },
+    {
+      "id": "naltrexone-weight-direction",
+      "medication": "naltrexone",
+      "topic": "weight_direction",
+      "summary": "The little human data show weight gain, not the loss the drug's mechanism would predict.",
+      "detail": "A chart review of 36 patients (20 naltrexone, 16 methadone) found no statistically different weight course between the two, and both groups gained. A case report describes a large gain on naltrexone. Naltrexone is a component of the weight loss drug Contrave, so the authors of a scoping review called these findings unexpected.",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Opioid-dependent outpatients, US chart review; one case report from India",
+      "duration": "3 to 6 months",
+      "caveat": "One small retrospective chart review and one case report.",
+      "sources": [
+        "mysels2011",
+        "carr2023"
+      ]
+    },
+    {
+      "id": "naltrexone-weight-amount",
+      "medication": "naltrexone",
+      "topic": "weight_amount",
+      "summary": "In one small chart review, gain was about 10 lb over 6 months, similar to methadone.",
+      "detail": "Naltrexone patients gained about 4.6% of body weight at 3 months and 6.7% at 6 months, versus 1.9% and 3.7% for methadone patients. The review's discussion describes roughly 10 lb gained in both groups over 6 months. A case report describes a 33 lb gain.",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Opioid-dependent outpatients, US",
+      "duration": "3 to 6 months",
+      "caveat": "One study of 36 people, with no control for other factors reported in our sources. The case report cannot show what is typical.",
+      "sources": [
+        "mysels2011",
+        "carr2023"
+      ]
+    },
+    {
+      "id": "naltrexone-gi",
+      "medication": "naltrexone",
+      "topic": "gi",
+      "summary": "Constipation, nausea, and vomiting are listed as commonly reported with naltrexone, according to one provider guide.",
+      "detail": "The guide states this for naltrexone and buprenorphine together, without a specific study, and says their nutritional effects have not been well studied. It notes that long-acting forms of naltrexone and buprenorphine now exist and need research on weight and eating habits.",
+      "strength": "thin",
+      "evidence_type": "review",
+      "publication_type": "peer-reviewed",
+      "population": "People taking naltrexone or buprenorphine for OUD",
+      "duration": "Not specified",
+      "caveat": "Stated for two drugs at once with no direct citation. Check the naltrexone labels on DailyMed (the pill and the monthly injection have separate labels) for the actual reported rates.",
+      "sources": [
+        "chavez2020"
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "id": "recovery_phase",
+      "title": "Recovery phase",
+      "description": "Some eating changes belong to the stage of recovery more than to any one medication.",
+      "cells": [
+        {
+          "id": "phase-active-use",
+          "title": "Active use",
+          "summary": "Poor intake and undernutrition are commonly reported, though most people entering MOUD studies were not underweight on average.",
+          "detail": "A narrative review reports malnutrition prevalence of 24% to 50% in people with substance use disorders, and one nutrition study found 63% of opioid-dependent patients reported unintended weight loss. Opioids reduce gut motility. At the same time, a scoping review found that average baseline BMI in MOUD studies was in the normal range or higher, with none averaging underweight, and a 2022 paper notes obesity is less common in active OUD than in the general population. A provider guide summarizes reports that people who use opioids often eat infrequently (fewer than two meals a day, skipping meals, fasting to prolong a high), eat few fruits and vegetables, and rely on quick, cheap, sweet foods and soft drinks. It also notes that opioids dry the mouth, and dental problems can push people toward soft, sweet foods.",
+          "strength": "mixed",
+          "evidence_type": "review",
+          "publication_type": "peer-reviewed",
+          "population": "Mixed substances, mostly opioids",
+          "duration": "Not applicable",
+          "caveat": "Averages hide subgroups. Some samples had many underweight patients.",
+          "sources": [
+            "garcia2025",
+            "migdanis2023",
+            "carr2023",
+            "manza2022",
+            "chavez2020"
+          ]
+        },
+        {
+          "id": "phase-early-rebound",
+          "title": "Early recovery: rebound appetite and weight gain",
+          "summary": "Rebound explains some gain, especially for people who start underweight. But many people who start at a normal weight keep gaining.",
+          "detail": "A review describes rebound appetite after the suppression of active use, and a nutrition study found appetite and intake improve later in recovery. A study of 111 people in early recovery described weight gain beyond what is needed to regain pre-addiction weight. A Lebanese study of 172 men found lower starting BMI predicted more gain, but about 40% of those starting at normal weight became overweight or obese. A scoping review concluded the data partially contradict the idea that gain is mostly restored weight.",
+          "strength": "mixed",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Mixed substances; the Lebanese sample was all men",
+          "duration": "Weeks to years",
+          "caveat": "Cross-sectional designs and self-reported weight limit what can be said about trajectories.",
+          "sources": [
+            "garcia2025",
+            "migdanis2023",
+            "gottfredson2019",
+            "mahboub2023",
+            "carr2023"
+          ]
+        },
+        {
+          "id": "phase-sweet-desire",
+          "title": "Craving or wanting sweets",
+          "summary": "People in treatment consistently report wanting sweets. Most of this evidence is small self-report studies.",
+          "detail": "A small survey found methadone patients more eager for sweets than controls. A review describes sweet preference in people with chronic heavy alcohol use, while cocaine withdrawal may reduce the value of sweet taste, so the pattern may differ by substance. A 2023 paper notes that people in recovery show increased liking for sweet foods in human studies. In a later US study, adults on methadone or buprenorphine who wanted to eat at the time were more eager for unhealthy foods and wanted larger portions of them than comparison adults, yet their lab ratings of sweet solutions were similar.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Mixed; most direct evidence is from methadone patients or alcohol",
+          "duration": "Mostly cross-sectional",
+          "caveat": "Desire is not the same as intake or weight gain. See the next two cells. In the later study only 38% of the OUD group (and 50% of comparison adults) reported wanting to eat at the time, so those ratings come from a subset.",
+          "sources": [
+            "nolan2007",
+            "garcia2025",
+            "gottfredson2019",
+            "ochalek2021"
+          ]
+        },
+        {
+          "id": "phase-sweet-intake",
+          "title": "Measured sugar intake",
+          "summary": "Sugar intake differs by study: high in one US sample, low in a Lebanese one.",
+          "detail": "In a US study, adults on methadone or buprenorphine reported about 89 g of added sugar per day from sweetened caffeinated drinks, versus about 4 g in comparison adults, and soda made up 64% of that. They also reported eating 17 of 23 sweet foods and drinks more often. In a Lebanese sample, added sugar averaged only about 2.5% to 2.8% of calories (fat about 38%), from one 24-hour recall per person. Older studies cited secondhand report high sugar intake in methadone patients.",
+          "strength": "mixed",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Adults on methadone or buprenorphine (US); men in outpatient substitution treatment and residential rehab (Lebanon)",
+          "duration": "Past-month food frequency (US); single 24-hour recall (Lebanon)",
+          "caveat": "Different methods and countries, so the two samples cannot be compared directly, and both rely on self-report. In the US study the comparison group was younger, had higher income and more education, drank alcohol more often, and used less tobacco and caffeine. The older sugar-intake studies (for example Zador 1996, Morabia 1989) need to be read directly.",
+          "sources": [
+            "mahboub2023",
+            "nolan2007",
+            "ochalek2021"
+          ]
+        },
+        {
+          "id": "phase-addiction-transfer",
+          "title": "Eating sweets to cope with drug cravings",
+          "summary": "One study tested this directly and did not find support for it.",
+          "detail": "In 111 people in early recovery, drug and alcohol cravings were not followed by more eating of sugar, fat, caffeine, or calories in the next two hours. If anything, people ate slightly less added sugar after stronger-than-usual cravings. A separate review uses the term addiction transfer differently, meaning difficulty telling a drug urge from hunger. The two papers are not testing the same idea. A provider guide uses the term for trading one compulsive behavior for another, citing a hypothesis paper in liver transplant patients, and adds that hunger returning in sobriety can feel like a craving.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Mostly alcohol and cocaine, some opioids; 74% women; many in treatment for more than one substance",
+          "duration": "Three one-week bursts, six weeks apart",
+          "caveat": "One study. It measured cravings for drugs, not for food. Several results were only marginally significant.",
+          "sources": [
+            "gottfredson2019",
+            "garcia2025",
+            "chavez2020"
+          ]
+        },
+        {
+          "id": "phase-desire-weight",
+          "title": "Does sweet desire explain weight gain?",
+          "summary": "Two small studies did not find that it does.",
+          "detail": "A thesis comparing methadone and Suboxone patients found significant weight gain on methadone and none on Suboxone, and the gain was not related to food craving, hedonic eating, or addictive-like eating. In the methadone survey, treatment length, BMI, and food ratings were not correlated. By contrast, a provider guide says several studies concluded that weight gain on methadone was mainly due to a stronger preference for sweet foods (citing a 2010 review), but the studies in this section that tested the link directly did not support it.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "thesis",
+          "population": "Outpatient methadone and buprenorphine/naloxone patients, US",
+          "duration": "Cross-sectional with chart review",
+          "caveat": "Small samples. The thesis is not peer-reviewed. Wanting sweets and gaining weight may both occur without one causing the other.",
+          "sources": [
+            "mcdonald2017",
+            "nolan2007",
+            "chavez2020"
+          ]
+        },
+        {
+          "id": "phase-propensity",
+          "title": "Individual tendency (trait-level risk)",
+          "summary": "One study supports a trait-level explanation. Another found food addiction did not predict weight gain.",
+          "detail": "In the early recovery study, a combined score of impulsivity, low self-control, family history, number of substances, and food addiction symptoms was moderately linked to higher calorie and sugar intake and strongly linked to self-reported weight gain or appetite increase. The Lebanese study found food addiction was not associated with weight gain. The authors note that food addiction as a concept is still debated.",
+          "strength": "mixed",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Mixed substances (US); men in treatment (Lebanon)",
+          "duration": "Weeks to months",
+          "caveat": "The odds ratio of about 63 is likely imprecise in a sample of 111. Some components of the score overlap with food addiction symptoms.",
+          "sources": [
+            "gottfredson2019",
+            "mahboub2023"
+          ]
+        },
+        {
+          "id": "phase-later",
+          "title": "Later recovery",
+          "summary": "Calorie and sugar intake tended to decline over months in one study.",
+          "detail": "In the early recovery study, calorie intake fell across the three measurement bursts and added sugar fell marginally. A sweet liking study cited by the authors found liking for sweetness decreased over time in alcohol treatment.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Mostly alcohol and cocaine",
+          "duration": "About 3 months",
+          "caveat": "Short follow-up and many participants dropped out of later bursts.",
+          "sources": [
+            "gottfredson2019"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "setting",
+      "title": "Setting",
+      "description": "Where someone lives and eats while in treatment may matter as much as the drug.",
+      "cells": [
+        {
+          "id": "setting-outpatient-vs-residential",
+          "title": "Outpatient vs residential treatment",
+          "summary": "In one study, people in residential rehab reported more weight gain than people in outpatient opioid substitution treatment.",
+          "detail": "In 172 men in Lebanon, 78% in rehab and 54% in outpatient substitution treatment reported gaining weight (average about 10.6 kg versus 2.0 kg). Treatment type was not an independent predictor once other factors were controlled. The authors suggest, without testing it, that structured communal meals, boredom-driven bingeing, and highly processed foods served because of limited budgets may play a role.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Men in Lebanon",
+          "duration": "Cross-sectional",
+          "caveat": "Weight change was self-reported. The groups differed in treatment length (5.5 versus 31.6 months), housing, and baseline BMI. The explanations are hypotheses.",
+          "sources": [
+            "mahboub2023"
+          ]
+        },
+        {
+          "id": "setting-structured-meals",
+          "title": "Structured meals and food education",
+          "summary": "Small residential programs with nutrition education or cooking activities reported better eating behavior.",
+          "detail": "A review describes group nutrition education in an Italian alcohol treatment center linked to more regular meals, and a 6-week education and cooking intervention across 6 men's drug treatment centers in New York that reported improved body composition and eating behavior. The early recovery study suggests handing out candy at group meetings may be unhelpful.",
+          "strength": "thin",
+          "evidence_type": "review",
+          "publication_type": "peer-reviewed",
+          "population": "Residential treatment centers, not recovery residences",
+          "duration": "Weeks to months",
+          "caveat": "Reported through a narrative review. Study designs and rigor were not assessed here.",
+          "sources": [
+            "garcia2025",
+            "gottfredson2019"
+          ]
+        },
+        {
+          "id": "setting-residential-food-service",
+          "title": "Food service in residential treatment programs",
+          "summary": "Residential treatment programs rarely have a dietitian, have no nutrition guidelines, and often serve cheap, highly processed food.",
+          "detail": "A provider guide reports that only 7% of residential treatment facilities in one Los Angeles study used a dietitian, and that there are no nutrition guidelines for drug treatment facilities. A study of 67 residential treatment centers in Massachusetts found food service mainly consisted of highly processed foods, even where nutrition education was offered, and facilities named money as the biggest barrier. The guide adds that most health insurance plans do not cover nutrition services for addiction recovery.",
+          "strength": "thin",
+          "evidence_type": "review",
+          "publication_type": "peer-reviewed",
+          "population": "Residential alcohol and drug treatment programs in Los Angeles and Massachusetts, not recovery residences",
+          "duration": "Not applicable",
+          "caveat": "Secondhand. The Massachusetts figure comes from a university report, not a journal article. These are treatment centers, not recovery housing, and not specific to MOUD.",
+          "sources": [
+            "chavez2020"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_access",
+      "title": "Food access",
+      "description": "Money, kitchens, and food quality shape what people can eat, whatever the medication.",
+      "cells": [
+        {
+          "id": "access-food-insecurity",
+          "title": "Food insecurity among people on MOUD",
+          "summary": "In one US study, half of adults on methadone or buprenorphine had been food insecure in the past year, versus 10% of comparison adults.",
+          "detail": "50% of the OUD group reported past-year food insecurity versus 10% of comparison adults, and more than a third of the OUD group reported the most severe level (very low food security). The same group had more obesity (45% versus 20%). The authors note that food insecurity is linked to overweight and obesity among US adults. In this study, sucrose response did not vary with food insecurity.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Adults on a stable methadone or buprenorphine dose for more than 3 months, Vermont, US",
+          "duration": "Past 12 months",
+          "caveat": "One study of 80 people. The OUD group had much lower income, less education, and less full-time employment than the comparison group, so the difference may reflect these conditions more than the medications. Cross-sectional, and food insecurity was self-reported on a USDA survey.",
+          "sources": [
+            "ochalek2021"
+          ]
+        },
+        {
+          "id": "access-basics",
+          "title": "Money, cooking facilities, and hunger",
+          "summary": "Lack of money, motivation, and cooking facilities contribute to poor nutrition in people with substance use disorders.",
+          "detail": "A review reports that appetite suppression, taste changes, and a lack of money, motivation, or cooking facilities all contribute to malnutrition. A Canadian study cited in the review found 65% of people who injected drugs met criteria for hunger, strongly linked to depression. A provider guide cites estimates of food insecurity between 30% and 70% among people who inject opioids, and argues that many people affected by the opioid crisis live in low-income areas with limited access to affordable, nutritious food.",
+          "strength": "thin",
+          "evidence_type": "review",
+          "publication_type": "peer-reviewed",
+          "population": "People with substance use disorders, not specific to MOUD",
+          "duration": "Not specified",
+          "caveat": "Secondhand through two narrative reviews. The 30% to 70% range comes from studies of people who inject drugs, not people on MOUD. The neighborhood claim is the authors' argument, not a tested finding.",
+          "sources": [
+            "garcia2025",
+            "chavez2020"
+          ]
+        },
+        {
+          "id": "access-social-determinants",
+          "title": "Social conditions as a confound",
+          "summary": "People on methadone and on buprenorphine differ in employment and education, which complicates comparing the drugs.",
+          "detail": "A scoping review notes national data showing methadone patients are less likely to be employed and have lower education than buprenorphine patients, and that obesity patterns follow similar gradients. The authors raise this as a possible explanation for differences between the drugs.",
+          "strength": "thin",
+          "evidence_type": "review",
+          "publication_type": "peer-reviewed",
+          "population": "US patients",
+          "duration": "Not applicable",
+          "caveat": "This is a proposed explanation, not a tested one.",
+          "sources": [
+            "carr2023"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "who_gains_more",
+      "title": "Who gains more weight",
+      "description": "Individual factors studied so far. Most are unsettled.",
+      "cells": [
+        {
+          "id": "who-sex",
+          "title": "Sex",
+          "summary": "Findings are mixed. A meta-analysis found no significant difference between women and men.",
+          "detail": "Women gained more in 3 of 4 longitudinal methadone studies, but the pooled difference was not significant. In a 12-week buprenorphine trial there was no sex difference. A scoping review reports mixed findings across methadone studies.",
+          "strength": "mixed",
+          "evidence_type": "review",
+          "publication_type": "peer-reviewed",
+          "population": "Mostly methadone patients",
+          "duration": "12 weeks to 3 years",
+          "caveat": "The meta-analysis had only 4 studies.",
+          "sources": [
+            "manza2022",
+            "carr2023"
+          ]
+        },
+        {
+          "id": "who-cocaine",
+          "title": "Ongoing cocaine use",
+          "summary": "Regular cocaine use was linked to less weight gain in a few studies.",
+          "detail": "In one study, people using cocaine regularly gained about 1.5 lb versus 12.4 lb in 12 months among those who did not. A scoping review reports most studies on this found cocaine use predicted less gain.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "abstract or report",
+          "population": "Methadone patients, US",
+          "duration": "Up to 12 months",
+          "caveat": "The key studies are conference abstracts.",
+          "sources": [
+            "carr2023"
+          ]
+        },
+        {
+          "id": "who-dose",
+          "title": "Methadone dose",
+          "summary": "Mixed. One study found a link between higher dose and gain, two did not.",
+          "detail": "One study found a modest correlation between dose and BMI increase (r about 0.27). Two others found no association.",
+          "strength": "mixed",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Methadone patients",
+          "duration": "Months to years",
+          "caveat": "Small number of studies.",
+          "sources": [
+            "carr2023"
+          ]
+        },
+        {
+          "id": "who-race",
+          "title": "Race and ethnicity",
+          "summary": "Largely unstudied.",
+          "detail": "14 of 21 studies in a scoping review did not report race or ethnicity. One study found Black patients gained more over 36 months than White patients.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "US methadone patients",
+          "duration": "36 months",
+          "caveat": "One study. Differences in access to methadone versus buprenorphine may be part of the picture.",
+          "sources": [
+            "carr2023",
+            "manza2022"
+          ]
+        },
+        {
+          "id": "who-nutrition-knowledge",
+          "title": "Nutrition knowledge",
+          "summary": "Knowledge was lower in people on MOUD in one US study, but did not predict weight gain in a Lebanese one.",
+          "detail": "In the US study, adults on methadone or buprenorphine answered 46% of nutrition knowledge items correctly versus 65% for comparison adults, with the biggest gaps on links between diet and disease. In the Lebanese study, most participants had poor nutrition knowledge, and it was not associated with weight gain.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Adults on MOUD (US); men in treatment (Lebanon)",
+          "duration": "Cross-sectional",
+          "caveat": "Knowing less is not the same as gaining more. Neither study followed people over time, and the US comparison group differed in education and income.",
+          "sources": [
+            "ochalek2021",
+            "mahboub2023"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "metabolic_health",
+      "title": "Blood sugar and metabolic health",
+      "description": "Weight is only part of the picture. Some studies also look at blood sugar, cholesterol, and blood pressure.",
+      "cells": [
+        {
+          "id": "metabolic-syndrome-comparison",
+          "title": "Metabolic syndrome: buprenorphine versus methadone",
+          "summary": "In one cross-sectional study, metabolic syndrome was more common on methadone than on buprenorphine, and HDL cholesterol was better on buprenorphine.",
+          "detail": "58 adults (26 on buprenorphine, 32 on methadone) had blood lipids, blood sugar, body composition, and a glucose tolerance test measured. Metabolic syndrome was more common on methadone, and the authors say the methadone rate was higher than in the general population (56% versus 34%; the buprenorphine rate is in a table not reviewed here). HDL cholesterol was higher on buprenorphine, and that difference held after adjusting for time on medication. Blood pressure and insulin sensitivity were also better on buprenorphine, but those differences did not hold after the adjustment. Longer methadone exposure was linked to worse triglycerides, HDL, blood pressure, fasting glucose, and hemoglobin A1C. Longer buprenorphine exposure was linked to better HDL.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Adults with OUD on buprenorphine or methadone, Massachusetts, US; people with other substance use disorders, diabetes, or eating disorders were excluded",
+          "duration": "One-time assessment; average time on medication differed (shorter on buprenorphine)",
+          "caveat": "Cross-sectional and not randomized. People who are metabolically unwell may be given higher doses or stay on methadone longer, so the duration links do not show that the drug caused the changes. The paper itself raises this. The authors also suggest buprenorphine as a default first choice; that goes beyond what this design can show, and this site does not make treatment recommendations.",
+          "sources": [
+            "elman2020"
+          ]
+        },
+        {
+          "id": "metabolic-both-groups",
+          "title": "Weight and insulin resistance on both medications",
+          "summary": "Most people on either medication in this study were overweight or obese and somewhat insulin resistant.",
+          "detail": "About 85% on buprenorphine and 78% on methadone were overweight or obese, compared with about 72% of US adults cited by the authors, with no significant difference between the drugs in BMI categories or body composition. Both groups showed mild (buprenorphine) to moderate (methadone) insulin resistance and mostly very light to light physical activity. Two methadone patients met criteria for diabetes by fasting glucose despite a prior diabetes exclusion, and several more in each group had impaired fasting glucose or impaired glucose tolerance.",
+          "strength": "thin",
+          "evidence_type": "human observational",
+          "publication_type": "peer-reviewed",
+          "population": "Adults with OUD on buprenorphine or methadone, Massachusetts, US",
+          "duration": "One-time assessment",
+          "caveat": "No measurements from before treatment, so this cannot show that the medication caused the weight or blood sugar findings. Participants were recruited by advertising and carefully screened.",
+          "sources": [
+            "elman2020"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    "GI effects and food or drink interactions for each medication: use FDA labels on DailyMed and primary studies.",
+    "Naltrexone effects on appetite, nausea, and weight in people with OUD: little human evidence so far.",
+    "Whether rebound appetite explains weight gain on methadone: studies rarely control for starting nutritional status.",
+    "How these findings apply to recovery residences specifically: nothing found so far.",
+    "Whether food insecurity and weight gain on MOUD are linked over time: current evidence is cross-sectional.",
+    "Whether metabolic differences between buprenorphine and methadone reflect the drugs themselves or who receives them: no randomized comparison found so far.",
+    "How recovery residences, as opposed to residential treatment centers, handle food and meals: nothing found so far."
+  ],
+  "to_read_next": [
+    "Haber et al. 2017, constipation and other symptoms in women and men on methadone and buprenorphine (Drug and Alcohol Dependence 181:132-139)",
+    "Yeomans and Gray 2002, opioid peptides and the control of human ingestive behavior (Neuroscience and Biobehavioral Reviews 26:713-728)",
+    "Elman et al. 2020, buprenorphine versus methadone metabolic indices (Scientific Reports 10:5617)",
+    "Ochalek et al. 2021, sucrose response and eating behaviors in OUD (Drug and Alcohol Dependence 227)",
+    "Mysels and Sullivan 2010, relationship between opioid and sugar intake (Journal of Opioid Management 6:445-452)",
+    "Sweeney et al. 2019 and Fenn et al. 2015, large US methadone weight studies",
+    "FDA labels on DailyMed for methadone, buprenorphine, and naltrexone",
+    "Langleben et al. 2012, depot naltrexone and the rewarding properties of sugar in opioid dependence (Psychopharmacology 220:559-564)",
+    "Eikemo et al. 2016, sweet taste pleasantness modulated by morphine and naltrexone (Psychopharmacology 233:3711-3723)",
+    "Green et al. 2013, opiate agonists and antagonists and taste perception (Journal of Psychopharmacology 27:265-275)",
+    "Goldschmidt et al. 2018, loss of control eating among adults on methadone maintenance (International Journal of Behavioral Medicine 25:693-697)",
+    "Nolan 2024, food selection in a buffet among people in recovery (Physiology and Behavior 275:114458)",
+    "McLinden et al. 2018, methadone treatment and severe food insecurity (Drug and Alcohol Dependence 185:374-380)",
+    "Tilbrook et al. 2017, buprenorphine-naloxone programs and glycemic control in type 2 diabetes (Canadian Family Physician 63:e350-e354)",
+    "Vallecillo et al. 2018, metabolic syndrome among people on methadone (Substance Abuse 39:46-51)",
+    "Taveira et al. 2014, naltrexone and body fat in olanzapine-treated patients (Journal of Psychopharmacology 28:395-400), not an OUD population",
+    "Neale et al. 2012, eating patterns among heroin users: a qualitative study (Addiction 107:635-641)",
+    "Nolan 2013, Shared urges? The links between drugs of abuse, eating, and body weight (Current Obesity Reports 2:150-156)",
+    "Wiss et al. 2019, rapid assessment of nutrition services in Los Angeles substance use disorder treatment centers (Journal of Community Health 44:88-94)",
+    "Reid 2014, assessment of wellness and nutrition in residential alcohol and drug abuse treatment (Brandeis University report)",
+    "Strike et al. 2012, frequent food insecurity among injection drug users (BMC Public Health 12:1058)",
+    "Saeland et al. 2011, high sugar consumption and poor nutrient intake among drug addicts in Oslo (British Journal of Nutrition 105:618-624)",
+    "Ali 2017, caution patients about common food-drug interactions (Current Psychiatry 16(5):e1)",
+    "Wiss 2019, a biopsychosocial overview of the opioid crisis: nutrition and gastrointestinal health (Frontiers in Public Health 7:193)"
+  ],
+  "sources": [
+    {
+      "id": "gottfredson2019",
+      "citation": "Gottfredson NC, Sokol RL. Explaining excessive weight gain during early recovery from addiction. Substance Use and Misuse. 2019;54(5):769-778.",
+      "url": "https://doi.org/10.1080/10826084.2018.1536722",
+      "publication_type": "peer-reviewed",
+      "note": "N=111, mostly alcohol and cocaine, some opioids. Measured cravings and food intake in real time."
+    },
+    {
+      "id": "garcia2025",
+      "citation": "Garcia-Estrada J, et al. Malnutrition in substance use disorders: a critical issue in their treatment and recovery. Healthcare. 2025;13(8):868.",
+      "url": "https://doi.org/10.3390/healthcare13080868",
+      "publication_type": "peer-reviewed",
+      "note": "Narrative review mixing animal and human studies. Many claims rest on secondary references."
+    },
+    {
+      "id": "mahboub2023",
+      "citation": "Mahboub N, Rizk R, Farsoun CG, de Vries N. Patterns and determinants of weight gain among people who use drugs undergoing treatment for recovery in Lebanon. Nutrients. 2023;15(4):990.",
+      "url": "https://doi.org/10.3390/nu15040990",
+      "publication_type": "peer-reviewed",
+      "note": "172 men, cross-sectional, self-reported weight change. Use the table values for odds ratios."
+    },
+    {
+      "id": "nolan2007",
+      "citation": "Nolan LJ, Scagnelli LM. Preference for sweet foods and higher body mass index in patients being treated in long-term methadone maintenance. Substance Use and Misuse. 2007;42:1555-1566.",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/10826080701517727",
+      "publication_type": "peer-reviewed",
+      "note": "Pilot study, 14 patients and 14 controls, data collected in 2002."
+    },
+    {
+      "id": "manza2022",
+      "citation": "Manza P, et al. Sex differences in weight gain during medication-based treatment for opioid use disorder: a meta-analysis and retrospective analysis of clinical trial data. Drug and Alcohol Dependence. 2022;238:109575.",
+      "url": "https://doi.org/10.1016/j.drugalcdep.2022.109575",
+      "publication_type": "peer-reviewed",
+      "note": "Meta-analysis of 4 methadone studies plus a 12-week buprenorphine trial re-analysis (n=360)."
+    },
+    {
+      "id": "carr2023",
+      "citation": "Carr MM, et al. Weight change among patients engaged in medication treatment for opioid use disorder: a scoping review. 2023.",
+      "url": "https://doi.org/10.1080/00952990.2023.2207720",
+      "publication_type": "peer-reviewed",
+      "note": "21 studies, mostly small and uncontrolled. Includes some conference abstracts. The DOI shown is the one listed for the supplementary material, so confirm it opens the article."
+    },
+    {
+      "id": "mysels2011",
+      "citation": "Mysels DJ, Vosburg SK, Benga I, Levin FR, Sullivan MA. Course of weight change during naltrexone vs. methadone maintenance for opioid-dependent patients. Journal of Opioid Management. 2011;7:47-53.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3111025",
+      "publication_type": "peer-reviewed",
+      "note": "Retrospective chart review, 36 patients."
+    },
+    {
+      "id": "mcdonald2017",
+      "citation": "McDonald E. Hedonic mechanisms of weight changes in medication assisted treatment for opioid addiction. MS thesis, University of Vermont. 2017.",
+      "url": "https://scholarworks.uvm.edu/graddis/669",
+      "publication_type": "thesis",
+      "note": "Not peer-reviewed. Small subset (39 participants) analyzed for weight change."
+    },
+    {
+      "id": "migdanis2023",
+      "citation": "Migdanis A, et al. Nutritional status and eating habits of patients with opioid dependence. Cureus. 2023.",
+      "url": "https://assets.cureus.com/uploads/original_article/pdf/208659/20231206-31514-13ggxde.pdf",
+      "publication_type": "peer-reviewed",
+      "note": "Title and some details were incomplete in the source text; confirm the exact title before citing."
+    },
+    {
+      "id": "ochalek2021",
+      "citation": "Ochalek TA, Laurent J, Badger GJ, Sigmon SC. Sucrose subjective response and eating behaviors among individuals with opioid use disorder. Drug and Alcohol Dependence. 2021;227.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0376871621005123",
+      "publication_type": "peer-reviewed",
+      "note": "40 adults on methadone (21) or buprenorphine (19) versus 40 without OUD, Vermont. Lab sucrose taste test plus questionnaires on eating, food security, and nutrition knowledge. The groups differed in age, income, education, and employment. The methadone-versus-buprenorphine comparison was a small secondary analysis, and its reported numbers look duplicated in the text, so they are not used here. Add the DOI when you find it."
+    },
+    {
+      "id": "elman2020",
+      "citation": "Elman I, Howard M, Borodovsky JT, Mysels D, Rott D, Borsook D, Albanese M. Metabolic and addiction indices in patients on opioid agonist medication-assisted treatment: a comparison of buprenorphine and methadone. Scientific Reports. 2020;10:5617.",
+      "url": "https://www.nature.com/articles/s41598-020-62556-0",
+      "publication_type": "peer-reviewed",
+      "note": "Cross-sectional, 26 buprenorphine and 32 methadone patients, not randomized. Excluded people with other substance use disorders, diabetes, and eating disorders. An author correction was published on 1 May 2020, so check it. Add the DOI when you find it."
+    },
+    {
+      "id": "chavez2020",
+      "citation": "Chavez MN, Rigg KK. Nutritional implications of opioid use disorder: a guide for drug treatment providers. Psychology of Addictive Behaviors. 2020;34(6):699-707.",
+      "url": "https://doi.org/10.1037/adb0000575",
+      "publication_type": "peer-reviewed",
+      "note": "Narrative review written as a guide for providers. Many claims rest on a single or secondhand citation, some from trade publications or reports. Treat as a map to primary sources, not as evidence in itself."
+    }
+  ]
+}

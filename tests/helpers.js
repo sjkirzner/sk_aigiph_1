@@ -77,6 +77,8 @@ function parseTokens(html) {
 function startServer() {
   const indexHtml = read("index.html");
   const dataText = read("data.json");
+  const previewHtml = read("preview/index.html");
+  const previewData = read("preview/data.json");
 
   const unsafe = JSON.parse(dataText);
   // Poison the cell that appears first in the grid (found by id, so row order doesn't matter).
@@ -100,6 +102,9 @@ function startServer() {
     "/repo-name/": [200, "text/html", indexHtml],
     "/repo-name/index.html": [200, "text/html", indexHtml],
     "/repo-name/data.json": [200, "application/json", dataText],
+    "/repo-name/preview/": [200, "text/html", previewHtml],
+    "/repo-name/preview/index.html": [200, "text/html", previewHtml],
+    "/repo-name/preview/data.json": [200, "application/json", previewData],
     "/broken/index.html": [200, "text/html", indexHtml],
     "/gap/index.html": [200, "text/html", indexHtml],
     "/gap/data.json": [200, "application/json", JSON.stringify(gap)],

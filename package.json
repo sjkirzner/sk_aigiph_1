@@ -3,7 +3,8 @@
   "private": true,
   "description": "MOUD, Food, and Metabolism: a static explainer site (index.html + data.json). This file only exists to run the tests.",
   "scripts": {
-    "test": "node --test --test-reporter=spec"
+    "test": "node --test --test-reporter=spec",
+    "sync-preview": "node tools/sync-preview.js"
   },
   "devDependencies": {
     "playwright": "^1.56.1"
