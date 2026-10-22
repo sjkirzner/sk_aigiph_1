@@ -58,8 +58,12 @@
   ],
   "topics": [
     {
-      "id": "appetite",
-      "name": "Appetite and food cravings"
+      "id": "appetite_effects",
+      "name": "Appetite Effects"
+    },
+    {
+      "id": "calorie_dense_cravings",
+      "name": "Calorie-dense Food Cravings"
     },
     {
       "id": "weight_direction",
@@ -72,17 +76,116 @@
     {
       "id": "gi",
       "name": "Stomach and gut effects"
-    },
-    {
-      "id": "food_interactions",
-      "name": "Food and drink interactions"
     }
   ],
   "cells": [
     {
-      "id": "methadone-appetite",
+      "id": "buprenorphine-appetite-effects",
+      "medication": "buprenorphine",
+      "topic": "appetite_effects",
+      "summary": "In one lab study, people on methadone or buprenorphine rated sweet solutions much like adults without OUD. The two medications did not clearly differ.",
+      "detail": "In a US study, 40 adults on stable methadone (21) or buprenorphine (19) and 40 adults without OUD tasted six sucrose concentrations under double-blind conditions. Overall liking was lower in the OUD group, but only for the weakest solutions (plain water and the two lowest concentrations), and ratings of sweetness intensity did not differ. Ratings were similar before and about 3 hours after the daily dose. Within the OUD group, methadone and buprenorphine patients were reported not to differ, but the study was not powered for that comparison. A separate cross-sectional study of 26 buprenorphine and 32 methadone patients (Elman 2020) found no difference in BMI categories, body composition, or sweet taste test ratings, and similar shares of 'sweet likers' (50% and 58%).",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Outpatients on buprenorphine or methadone: Vermont (Ochalek) and Massachusetts (Elman), US",
+      "duration": "One day (Ochalek); one-time assessment (Elman)",
+      "caveat": "Both studies are small and cross-sectional. The methadone-versus-buprenorphine comparison in the Vermont study was a secondary analysis, and its reported numbers look duplicated in the paper. Both taste tests used plain sucrose solutions, not real foods, and lab ratings may not reflect everyday eating. The Vermont groups also differed in age, education, income, and tobacco use.",
+      "sources": [
+        "ochalek2021",
+        "elman2020"
+      ]
+    },
+    {
+      "id": "buprenorphine-cravings",
+      "medication": "buprenorphine",
+      "topic": "calorie_dense_cravings",
+      "summary": "In one US study, adults on methadone or buprenorphine who wanted to eat were more eager for unhealthy foods and wanted larger portions of them than comparison adults. Results were not split by medication.",
+      "detail": "Among adults who said they wanted to eat at the time of testing (38% of the OUD group and 50% of comparison adults), those on methadone or buprenorphine were more eager for unhealthy foods, wanted larger portions of them, and wanted smaller portions of healthy foods. The comparison reported is between the OUD group as a whole and comparison adults.",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Adults on a stable methadone or buprenorphine dose for more than 3 months, Vermont, US",
+      "duration": "One screening session",
+      "caveat": "Only about 38% of the OUD group reported wanting to eat, so these ratings come from a subset. The groups differed in age, education, income, and tobacco use. Self-report. The text reviewed gives no separate results for buprenorphine.",
+      "sources": [
+        "ochalek2021"
+      ]
+    },
+    {
+      "id": "buprenorphine-weight-direction",
+      "medication": "buprenorphine",
+      "topic": "weight_direction",
+      "summary": "Unclear. A 12-week trial found no weight change, but other studies report gain.",
+      "detail": "In a re-analysis of a 12-week trial (360 people dependent on prescription opioids), average weight change was about 0.2 lb, not significant. A cohort of 107 patients reported gain over 4 months, and one case report described a large gain. A scoping review concluded there is little data supporting or refuting weight gain on buprenorphine/naloxone. A cross-sectional study of 58 patients found that about 85% of those on buprenorphine and 78% on methadone were overweight or obese, with no significant difference between the drugs. It cannot show whether weight changed after starting treatment.",
+      "strength": "mixed",
+      "evidence_type": "human trial",
+      "publication_type": "peer-reviewed",
+      "population": "Trial: prescription opioid dependence, US. Cohort: Turkey. The methadone studies mostly involved heroin.",
+      "duration": "4 weeks to 4 months",
+      "caveat": "The trial is short and its participants differ from the methadone studies, so the two cannot be compared directly. The authors say they know of no other randomized trial of weight on buprenorphine.",
+      "sources": [
+        "manza2022",
+        "carr2023",
+        "elman2020"
+      ]
+    },
+    {
+      "id": "buprenorphine-weight-amount",
+      "medication": "buprenorphine",
+      "topic": "weight_amount",
+      "summary": "Too little data to say. Reported amounts range from about 0.2 lb to about 10 lb.",
+      "detail": "The 12-week trial found an average change of about 0.2 lb. A cohort of 107 patients reported about 10 lb gained over 4 months. A single case report described a 50 lb gain in 3 months.",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Mixed; see the direction cell",
+      "duration": "4 weeks to 4 months",
+      "caveat": "Only one cohort and one case report beyond the trial. A case report cannot show what is typical.",
+      "sources": [
+        "manza2022",
+        "carr2023"
+      ]
+    },
+    {
+      "id": "buprenorphine-gi",
+      "medication": "buprenorphine",
+      "topic": "gi",
+      "summary": "Opioids slow the gut in general. Buprenorphine-specific evidence has not been reviewed yet.",
+      "detail": "A narrative review states that opioids reduce gastrointestinal motility. It does not separate buprenorphine from other opioids. The introduction of a 2020 study also states that opioids interfere with gut motility and with proper food absorption. A provider guide lists constipation, nausea, and vomiting as commonly reported with buprenorphine and naltrexone, without a specific study.",
+      "strength": "thin",
+      "evidence_type": "review",
+      "publication_type": "peer-reviewed",
+      "population": "People with opioid dependence",
+      "duration": "Not specified",
+      "caveat": "Stated for opioids generally. Needs a drug-specific source such as the label or Haber 2017.",
+      "sources": [
+        "garcia2025",
+        "elman2020",
+        "chavez2020"
+      ]
+    },
+    {
+      "id": "methadone-appetite-effects",
       "medication": "methadone",
-      "topic": "appetite",
+      "topic": "appetite_effects",
+      "summary": "In one lab study, people on methadone or buprenorphine rated sweet solutions much like adults without OUD. The two medications did not clearly differ.",
+      "detail": "In a US study, 40 adults on stable methadone (21) or buprenorphine (19) and 40 adults without OUD tasted six sucrose concentrations under double-blind conditions. Overall liking was lower in the OUD group, but only for the weakest solutions (plain water and the two lowest concentrations), and ratings of sweetness intensity did not differ. Ratings were similar before and about 3 hours after the daily dose. Within the OUD group, methadone and buprenorphine patients were reported not to differ, but the study was not powered for that comparison. A separate cross-sectional study of 26 buprenorphine and 32 methadone patients (Elman 2020) found no difference in BMI categories, body composition, or sweet taste test ratings, and similar shares of 'sweet likers' (50% and 58%).",
+      "strength": "thin",
+      "evidence_type": "human observational",
+      "publication_type": "peer-reviewed",
+      "population": "Outpatients on buprenorphine or methadone: Vermont (Ochalek) and Massachusetts (Elman), US",
+      "duration": "One day (Ochalek); one-time assessment (Elman)",
+      "caveat": "These are the same two studies as in the buprenorphine cell, which included people on both medications. Both studies are small and cross-sectional. The methadone-versus-buprenorphine comparison in the Vermont study was a secondary analysis, and its reported numbers look duplicated in the paper. Both taste tests used plain sucrose solutions, not real foods, and lab ratings may not reflect everyday eating. The Vermont groups also differed in age, education, income, and tobacco use.",
+      "sources": [
+        "ochalek2021",
+        "elman2020"
+      ]
+    },
+    {
+      "id": "methadone-cravings",
+      "medication": "methadone",
+      "topic": "calorie_dense_cravings",
       "summary": "In one small survey, people on methadone reported more eagerness for sweets and larger desired portions than comparison adults.",
       "detail": "14 methadone patients and 14 community controls answered questionnaires. Patients rated dessert, candy, chocolate, and pizza higher for eagerness, and dessert, chocolate, and candy higher for amount wanted. They also reported healthier habits than controls (more regular meals, more weight watching), which may reflect social desirability. Within the methadone group, treatment length, BMI, and food ratings were not correlated.",
       "strength": "thin",
@@ -90,7 +193,7 @@
       "publication_type": "peer-reviewed",
       "population": "Outpatient methadone patients in the US, about 50 months in treatment on average",
       "duration": "One-time survey",
-      "caveat": "Self-report only. Patients and controls were tested in different places. Cannot separate the drug from heroin history or pre-existing taste. A later lab study (see the buprenorphine row) found sweet-taste ratings similar to adults without OUD, which suggests the difference lies more in everyday eating than in how sweetness tastes.",
+      "caveat": "Self-report only. Patients and controls were tested in different places. Cannot separate the drug from heroin history or pre-existing taste. A later lab study (see the Appetite Effects cells) found sweet-taste ratings similar to adults without OUD, which suggests the difference lies more in everyday eating than in how sweetness tastes.",
       "sources": [
         "nolan2007",
         "ochalek2021"
@@ -150,111 +253,11 @@
       ]
     },
     {
-      "id": "methadone-food",
-      "medication": "methadone",
-      "topic": "food_interactions",
-      "summary": "A provider guide says alcohol and grapefruit juice should be avoided with methadone, because they could require a dose adjustment to avoid toxicity.",
-      "detail": "The guide gives this as a recommendation, citing a brief clinical article on common food-drug interactions (Ali 2017). It gives no mechanism or study.",
-      "strength": "thin",
-      "evidence_type": "review",
-      "publication_type": "peer-reviewed",
-      "population": "Not applicable (clinical guidance)",
-      "duration": "Not applicable",
-      "caveat": "Secondhand: a provider guide citing a short clinical article, not a study. Not checked against the FDA label on DailyMed. Anyone taking methadone should ask their prescriber or pharmacist before changing what they eat or drink.",
-      "sources": [
-        "chavez2020"
-      ]
-    },
-    {
-      "id": "buprenorphine-appetite",
-      "medication": "buprenorphine",
-      "topic": "appetite",
-      "summary": "In one lab study, people on methadone or buprenorphine rated sweet solutions much like adults without OUD. The two medications did not clearly differ.",
-      "detail": "In a US study, 40 adults on stable methadone (21) or buprenorphine (19) and 40 adults without OUD tasted six sucrose concentrations under double-blind conditions. Overall liking was lower in the OUD group, but only for the weakest solutions (plain water and the two lowest concentrations), and ratings of sweetness intensity did not differ. Ratings were similar before and about 3 hours after the daily dose. Within the OUD group, methadone and buprenorphine patients were reported not to differ, but the study was not powered for that comparison. A separate cross-sectional study of 26 buprenorphine and 32 methadone patients (Elman 2020) found no difference in BMI categories, body composition, or sweet taste test ratings, and similar shares of 'sweet likers' (50% and 58%).",
-      "strength": "thin",
-      "evidence_type": "human observational",
-      "publication_type": "peer-reviewed",
-      "population": "Outpatients on buprenorphine or methadone: Vermont (Ochalek) and Massachusetts (Elman), US",
-      "duration": "One day (Ochalek); one-time assessment (Elman)",
-      "caveat": "Both studies are small and cross-sectional. The methadone-versus-buprenorphine comparison in the Vermont study was a secondary analysis, and its reported numbers look duplicated in the paper. Both taste tests used plain sucrose solutions, not real foods, and lab ratings may not reflect everyday eating. The Vermont groups also differed in age, education, income, and tobacco use.",
-      "sources": [
-        "ochalek2021",
-        "elman2020"
-      ]
-    },
-    {
-      "id": "buprenorphine-weight-direction",
-      "medication": "buprenorphine",
-      "topic": "weight_direction",
-      "summary": "Unclear. A 12-week trial found no weight change, but other studies report gain.",
-      "detail": "In a re-analysis of a 12-week trial (360 people dependent on prescription opioids), average weight change was about 0.2 lb, not significant. A cohort of 107 patients reported gain over 4 months, and one case report described a large gain. A scoping review concluded there is little data supporting or refuting weight gain on buprenorphine/naloxone. A cross-sectional study of 58 patients found that about 85% of those on buprenorphine and 78% on methadone were overweight or obese, with no significant difference between the drugs. It cannot show whether weight changed after starting treatment.",
-      "strength": "mixed",
-      "evidence_type": "human trial",
-      "publication_type": "peer-reviewed",
-      "population": "Trial: prescription opioid dependence, US. Cohort: Turkey. The methadone studies mostly involved heroin.",
-      "duration": "4 weeks to 4 months",
-      "caveat": "The trial is short and its participants differ from the methadone studies, so the two cannot be compared directly. The authors say they know of no other randomized trial of weight on buprenorphine.",
-      "sources": [
-        "manza2022",
-        "carr2023",
-        "elman2020"
-      ]
-    },
-    {
-      "id": "buprenorphine-weight-amount",
-      "medication": "buprenorphine",
-      "topic": "weight_amount",
-      "summary": "Too little data to say. Reported amounts range from about 0.2 lb to about 10 lb.",
-      "detail": "The 12-week trial found an average change of about 0.2 lb. A cohort of 107 patients reported about 10 lb gained over 4 months. A single case report described a 50 lb gain in 3 months.",
-      "strength": "thin",
-      "evidence_type": "human observational",
-      "publication_type": "peer-reviewed",
-      "population": "Mixed; see the direction cell",
-      "duration": "4 weeks to 4 months",
-      "caveat": "Only one cohort and one case report beyond the trial. A case report cannot show what is typical.",
-      "sources": [
-        "manza2022",
-        "carr2023"
-      ]
-    },
-    {
-      "id": "buprenorphine-gi",
-      "medication": "buprenorphine",
-      "topic": "gi",
-      "summary": "Opioids slow the gut in general. Buprenorphine-specific evidence has not been reviewed yet.",
-      "detail": "A narrative review states that opioids reduce gastrointestinal motility. It does not separate buprenorphine from other opioids. The introduction of a 2020 study also states that opioids interfere with gut motility and with proper food absorption. A provider guide lists constipation, nausea, and vomiting as commonly reported with buprenorphine and naltrexone, without a specific study.",
-      "strength": "thin",
-      "evidence_type": "review",
-      "publication_type": "peer-reviewed",
-      "population": "People with opioid dependence",
-      "duration": "Not specified",
-      "caveat": "Stated for opioids generally. Needs a drug-specific source such as the label or Haber 2017.",
-      "sources": [
-        "garcia2025",
-        "elman2020",
-        "chavez2020"
-      ]
-    },
-    {
-      "id": "buprenorphine-food",
-      "medication": "buprenorphine",
-      "topic": "food_interactions",
-      "summary": "Not yet sourced.",
-      "detail": "To fill in: check the FDA drug label on DailyMed for guidance on eating or drinking around sublingual doses, and for alcohol and other interaction warnings.",
-      "strength": "needs_source",
-      "evidence_type": null,
-      "publication_type": null,
-      "population": null,
-      "duration": null,
-      "caveat": null,
-      "sources": []
-    },
-    {
-      "id": "naltrexone-appetite",
+      "id": "naltrexone-appetite-effects",
       "medication": "naltrexone",
-      "topic": "appetite",
-      "summary": "Opioid blockers reduce food intake and food pleasantness in animal and lab work, but not hunger. One report in people with opioid dependence points the same way but has not been read directly.",
-      "detail": "A narrative review reports that nonspecific opioid antagonists such as naloxone and naltrexone reduce intake of energy-dense foods in animals and reduce palatability and intake in humans. A cited review (Yeomans and Gray, 2002) reports that antagonists reduce food intake and pleasantness in humans but have no effect on hunger, mainly for foods rated more pleasant. A 2021 paper describes the preclinical evidence as consistent but the human evidence as mixed. The authors of a 2020 study say their group's earlier work found that depot (long-acting injectable) naltrexone reduced the rewarding properties of sugar in patients with opioid dependence (Langleben 2012, not yet read). A provider guide proposes that naltrexone and buprenorphine may suppress appetite by blocking feedback that signals the brain to stop eating (Greenway 2009), but it presents this as a possibility and notes these drugs are not well studied for nutrition.",
+      "topic": "appetite_effects",
+      "summary": "Opioid blockers reduce food intake and food pleasantness in animal and lab work, but not hunger. Human evidence in people with opioid dependence is mixed.",
+      "detail": "A narrative review reports that nonspecific opioid antagonists such as naloxone and naltrexone reduce intake of energy-dense foods in animals and reduce palatability and intake in humans. A cited review (Yeomans and Gray, 2002) reports that antagonists reduce food intake and pleasantness in humans but have no effect on hunger, mainly for foods rated more pleasant. A 2021 paper describes the preclinical evidence as consistent but the human evidence as mixed. A provider guide proposes that naltrexone and buprenorphine may suppress appetite by blocking feedback that signals the brain to stop eating (Greenway 2009), but it presents this as a possibility and notes these drugs are not well studied for nutrition.",
       "strength": "thin",
       "evidence_type": "animal or mechanism",
       "publication_type": "peer-reviewed",
@@ -265,8 +268,24 @@
         "garcia2025",
         "nolan2007",
         "ochalek2021",
-        "elman2020",
         "chavez2020"
+      ]
+    },
+    {
+      "id": "naltrexone-cravings",
+      "medication": "naltrexone",
+      "topic": "calorie_dense_cravings",
+      "summary": "One secondhand report suggests long-acting naltrexone reduced the rewarding properties of sugar in patients with opioid dependence. It has not been read directly.",
+      "detail": "The authors of a 2020 study say their group's earlier work found that depot (long-acting injectable) naltrexone reduced the rewarding properties of sugar in patients with opioid dependence (Langleben 2012, not yet read). A 2021 paper describes the preclinical evidence as consistent but the human evidence as mixed.",
+      "strength": "thin",
+      "evidence_type": "animal or mechanism",
+      "publication_type": "peer-reviewed",
+      "population": "Patients with opioid dependence (one secondhand report); animal models",
+      "duration": "Not specified",
+      "caveat": "Secondhand: the human finding comes from the introduction of another paper and the original study has not been read. The sources read here did not measure food cravings in people taking naltrexone directly; the one human report concerns the rewarding properties of sugar.",
+      "sources": [
+        "elman2020",
+        "ochalek2021"
       ]
     },
     {
@@ -318,20 +337,6 @@
       "sources": [
         "chavez2020"
       ]
-    },
-    {
-      "id": "naltrexone-food",
-      "medication": "naltrexone",
-      "topic": "food_interactions",
-      "summary": "Not yet sourced.",
-      "detail": "To fill in: check the FDA drug label on DailyMed for food and alcohol warnings.",
-      "strength": "needs_source",
-      "evidence_type": null,
-      "publication_type": null,
-      "population": null,
-      "duration": null,
-      "caveat": null,
-      "sources": []
     }
   ],
   "layers": [

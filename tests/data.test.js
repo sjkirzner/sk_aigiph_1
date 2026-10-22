@@ -46,8 +46,9 @@ test("buprenorphine's note explains that Suboxone combines buprenorphine and nal
 });
 
 test("there are five topic columns, including both weight questions", () => {
-  assert.deepEqual(data.topics.map((t) => t.id), ["appetite", "weight_direction", "weight_amount", "gi", "food_interactions"]);
-  assert.equal(data.topics[0].name, "Appetite and food cravings");
+  assert.deepEqual(data.topics.map((t) => t.id), ["appetite_effects", "calorie_dense_cravings", "weight_direction", "weight_amount", "gi"]);
+  assert.equal(data.topics[0].name, "Appetite Effects");
+  assert.equal(data.topics[1].name, "Calorie-dense Food Cravings");
   assert.ok(!JSON.stringify(data).includes("food desire"), 'old wording "food desire" is still in the data');
 });
 
@@ -97,7 +98,7 @@ test('"needs_source" cells have no evidence fields and no sources', () => {
   // The known gaps right now. When you fill one in, update this list.
   assert.deepEqual(
     gaps.map((c) => c.id).sort(),
-    ["buprenorphine-food", "naltrexone-food"]
+    [] // none right now: every grid cell has content
   );
   for (const c of gaps) {
     assert.deepEqual(c.sources, [], `${c.id}: a needs_source cell must not cite sources`);

@@ -100,11 +100,11 @@ test("five topic columns appear, including both weight columns", async () => {
     const heads = await page.$$eval("#col-heads span", (els) => els.map((e) => e.textContent));
     assert.deepEqual(heads, [
       "Medication",
-      "Appetite and food cravings",
+      "Appetite Effects",
+      "Calorie-dense Food Cravings",
       "Weight: does it go up?",
       "Weight: how much?",
       "Stomach and gut effects",
-      "Food and drink interactions",
     ]);
   });
 });
@@ -204,7 +204,7 @@ for (const scheme of ["light", "dark"]) {
 }
 
 test('"needs source" cells look visibly different (dashed border, hatched background, italic)', async () => {
-  await withPage(SITE, {}, async (page) => {
+  await withPage("/gap/index.html", {}, async (page) => {
     await ready(page);
     const styles = await page.$$eval("#rows details.cell", (els) =>
       els.map((e) => {
@@ -218,7 +218,7 @@ test('"needs source" cells look visibly different (dashed border, hatched backgr
       })
     );
     const gaps = styles.filter((s) => s.gap);
-    assert.equal(gaps.length, 2);
+    assert.equal(gaps.length, 1);
     for (const g of gaps) { assert.equal(g.border, "dashed"); assert.ok(g.hatched); assert.equal(g.italic, "italic"); }
     for (const s of styles.filter((x) => !x.gap)) { assert.equal(s.border, "solid"); assert.ok(!s.hatched); }
   });
@@ -234,7 +234,7 @@ test("cells start closed, and clicking one reveals detail, facts, caveat and sou
     assert.equal(await first.locator(".more").isVisible(), false);
     await first.locator("summary").click();
     assert.equal(await first.evaluate((e) => e.open), true);
-    const cell = data.cells.find((c) => c.id === "buprenorphine-appetite");
+    const cell = data.cells.find((c) => c.id === "buprenorphine-appetite-effects");
     assert.equal(await first.locator(".more").isVisible(), true);
     assert.equal(await first.locator(".more > p").first().textContent(), cell.detail);
     const facts = await first.locator(".facts").textContent();
@@ -250,7 +250,7 @@ test("cells start closed, and clicking one reveals detail, facts, caveat and sou
 });
 
 test('opening a "needs source" cell says there is no source yet', async () => {
-  await withPage(SITE, {}, async (page) => {
+  await withPage("/gap/index.html", {}, async (page) => {
     await ready(page);
     const gap = page.locator("#rows details.cell.ev-needs-source").first();
     await gap.locator("summary").click();

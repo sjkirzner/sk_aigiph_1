@@ -80,7 +80,7 @@ function startServer() {
 
   const unsafe = JSON.parse(dataText);
   // Poison the cell that appears first in the grid (found by id, so row order doesn't matter).
-  const victim = unsafe.cells.find((c) => c.id === "buprenorphine-appetite");
+  const victim = unsafe.cells.find((c) => c.id === "buprenorphine-appetite-effects");
   victim.summary = '<img src=x onerror="window.__pwned=1">';
   victim.sources = ["evil", "nolink"];
   unsafe.sources.push(
@@ -88,11 +88,21 @@ function startServer() {
     { id: "nolink", citation: "Source with no link", url: null, publication_type: "peer-reviewed", note: "" }
   );
 
+  // A copy of the site where one grid cell is a "needs source" gap, so the gap styling stays tested
+  // even when data.json has no gaps.
+  const gap = JSON.parse(dataText);
+  Object.assign(gap.cells.find((c) => c.id === "naltrexone-gi"), {
+    summary: "Not yet sourced.", detail: "To fill in: check the FDA label.", strength: "needs_source",
+    evidence_type: null, publication_type: null, population: null, duration: null, caveat: null, sources: [],
+  });
+
   const routes = {
     "/repo-name/": [200, "text/html", indexHtml],
     "/repo-name/index.html": [200, "text/html", indexHtml],
     "/repo-name/data.json": [200, "application/json", dataText],
     "/broken/index.html": [200, "text/html", indexHtml],
+    "/gap/index.html": [200, "text/html", indexHtml],
+    "/gap/data.json": [200, "application/json", JSON.stringify(gap)],
     "/unsafe/index.html": [200, "text/html", indexHtml],
     "/unsafe/data.json": [200, "application/json", JSON.stringify(unsafe)],
   };
