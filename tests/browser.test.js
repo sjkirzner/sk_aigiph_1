@@ -240,9 +240,10 @@ test("cells start closed, and clicking one reveals detail, facts, caveat and sou
     const facts = await first.locator(".facts").textContent();
     assert.ok(facts.includes(cell.population) && facts.includes(cell.duration));
     assert.ok((await first.locator(".caveat").textContent()).includes(cell.caveat));
-    // Every cited source is listed. Both sources of this cell have no URL yet, so they show as plain text.
+    // Every cited source is listed, with a link for each one that has a URL in data.json.
     assert.equal(await first.locator(".more ul li").count(), cell.sources.length);
-    assert.match(await first.locator(".more ul").textContent(), /No link available/);
+    const withUrl = cell.sources.filter((id) => data.sources.find((s) => s.id === id).url).length;
+    assert.equal(await first.locator(".more ul a").count(), withUrl);
     await first.locator("summary").click();
     assert.equal(await first.evaluate((e) => e.open), false);
   });
