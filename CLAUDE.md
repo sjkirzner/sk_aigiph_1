@@ -8,3 +8,4 @@
 - Always work on a separate branch, so every change gets a Preview.
 - Never merge into main unless I say "push to production."
 - Unless I say "push to production," make all changes to the preview site first (the copy of the page in the preview/ folder), and leave the public page (index.html and data.json in the root) alone.
+- When I say "push to production": run `npm run go-live` (it copies the preview page over the public page and removes "PREVIEW - " from the title), run all tests, then commit and merge into main. If any test fails, don't merge.

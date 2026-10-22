@@ -4,7 +4,8 @@
 // preview/index.html  = an exact copy of index.html
 // preview/data.json   = an exact copy of data.json, except meta.title gets the prefix "PREVIEW - "
 //
-// Run this again after ANY change to index.html or data.json. The tests fail if the copy is out of date.
+// WARNING: this OVERWRITES the preview with the public page, discarding any unreleased preview changes.
+// Use it only to reset the preview. To publish the preview, use:  npm run go-live
 const fs = require('node:fs');
 const path = require('node:path');
 
@@ -20,7 +21,7 @@ if (title.startsWith(PREFIX)) throw new Error('data.json meta.title already star
 // Change the title with a plain text replacement so every other byte of data.json stays exactly as it is.
 const realLine = '"title": ' + JSON.stringify(title);
 if (data.split(realLine).length !== 2) throw new Error('Expected exactly one ' + realLine + ' in data.json.');
-const previewData = data.replace(realLine, '"title": ' + JSON.stringify(PREFIX + title));
+const previewData = data.replace(realLine, () => '"title": ' + JSON.stringify(PREFIX + title));
 
 fs.mkdirSync(path.join(root, 'preview'), { recursive: true });
 fs.writeFileSync(path.join(root, 'preview', 'index.html'), html);
